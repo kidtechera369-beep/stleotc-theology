@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home — STL Ethiopian Orthodox Tewahedo Theology Class</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="cross">&#9768; &#10016; &#9768;</div>
+  <h1><a href="index.html">STL Ethiopian Orthodox Tewahedo Theology Class</a></h1>
+  <p class="tagline">Debre Nazreth St. Mary &amp; St. Gabriel Ethiopian Orthodox Tewahedo Church</p>
+</header>
+<nav class="site-nav"><a href="index.html" class="active">Home</a><a href="start-here.html">Start Here</a><a href="lessons.html">Lesson Library</a><a href="curriculum.html">Curriculum</a><a href="glossary.html">Glossary</a><a href="downloads.html">Download Center</a></nav>
+<main class="wrap">
+
+<div class="hero">
+  <h2>Welcome to Our Digital Classroom</h2>
+  <p>This website is the study hub for the theology class of our church. Here you will find every lesson we have taught — with summaries, key Bible verses, key terms, quizzes, discussion questions, and downloadable slides — organized so that students, parents, teachers, and deacons can study, review, and grow in the faith of the Ethiopian Orthodox Tewahedo Church.</p>
+  <div class="verse-rotator" id="verseRotator"><span id="verseText"></span><span class="vref" id="verseRef"></span></div>
+  <p style="margin-top:1rem;">
+  <a class="btn" href="start-here.html">Start Here</a>
+  <a class="btn secondary" href="lessons.html">Browse the Lesson Library</a>
+  <a class="btn secondary" href="downloads.html">Download Center</a>
+  </p>
+</div>
+<script>
+(function() {
+  var verses = [{"t": "Study to shew thyself approved unto God, a workman that needeth not to be ashamed, rightly dividing the word of truth.", "r": "2 Timothy 2:15"}, {"t": "Thy word is a lamp unto my feet, and a light unto my path.", "r": "Psalm 119:105"}, {"t": "Hear, O Israel: The Lord our God, the Lord is one.", "r": "Deuteronomy 6:4"}, {"t": "And the Word became flesh and dwelt among us.", "r": "John 1:14"}, {"t": "Wait patiently for the Lord. Be brave and courageous.", "r": "Psalm 27:14"}, {"t": "Redeeming the time, because the days are evil.", "r": "Ephesians 5:16"}, {"t": "Ethiopia shall soon stretch out her hands unto God.", "r": "Psalm 68:31"}];
+  var start = new Date(new Date().getFullYear(), 0, 0);
+  var day = Math.floor((new Date() - start) / 86400000);
+  var v = verses[day % verses.length];
+  document.getElementById('verseText').textContent = '\u201C' + v.t + '\u201D';
+  document.getElementById('verseRef').textContent = '\u2014 ' + v.r;
+})();
+</script>
+<div class="divider">&#10016; &#10016; &#10016;</div>
+<h2 class="section-title">Featured Lessons</h2>
+<div class="grid">
+<div class="card" style="--accent:#8a6312" data-title="lesson on the holy trinity" data-category="Holy Trinity" data-audience="Youth &amp; Young Adults" data-summary="an introduction to the church&#x27;s confession of one god in three persons, built on the nicene creed. the lesson explains one divine nature and three distinct persons, the meaning of unbegotten, begotten, and proceeding, the &#x27;two hands of god&#x27; teaching of st. irenaeus, and the fathers&#x27; analogy of fire — always with the reminder that every analogy falls short of the mystery.">
+  <div class="meta"><span class="cat-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="7.5" r="4.4"/><circle cx="8" cy="14.5" r="4.4"/><circle cx="16" cy="14.5" r="4.4"/></svg>Holy Trinity</span><span class="tag">Youth &amp; Young Adults</span></div>
+  <h3><a href="lessons/holy-trinity.html">Lesson on the Holy Trinity</a></h3>
+  <p>An introduction to the Church&#x27;s confession of one God in three Persons, built on the Nicene Creed. The lesson explains one divine Nature and three distinct Pers&hellip;</p>
+  <div class="links"><a href="lessons/holy-trinity.html">Read lesson</a> &middot; <a href="downloads/Holy_Trinity_Lesson_Slides.pptx" download>Download slides</a></div>
+</div>
+<div class="card" style="--accent:#6e1e1e" data-title="st. cyril of alexandria: the seal of the fathers" data-category="Christology" data-audience="Youth &amp; Young Adults" data-summary="the life and teaching of st. cyril (abba kirillos), 24th pope of alexandria, and his defense of the unity of christ against nestorius. the lesson explains the error of dividing christ into two persons, the meaning of theotokos, the iron-and-fire analogy of the tewahedo union, the council of ephesus (431 ad), and why our church bears the name tewahedo.">
+  <div class="meta"><span class="cat-chip"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 9h14M9 9v-2h6v2M12 21l-3-2.2M12 21l3-2.2"/></svg>Christology</span><span class="tag">Youth &amp; Young Adults</span></div>
+  <h3><a href="lessons/st-cyril.html">St. Cyril of Alexandria: The Seal of the Fathers</a></h3>
+  <p>The life and teaching of St. Cyril (Abba Kirillos), 24th Pope of Alexandria, and his defense of the unity of Christ against Nestorius. The lesson explains the e&hellip;</p>
+  <div class="links"><a href="lessons/st-cyril.html">Read lesson</a> &middot; <a href="downloads/St_Cyril_Lesson_Slides.pptx" download>Download slides</a></div>
+</div>
+<div class="card" style="--accent:#56561b" data-title="the purpose and practice of fasting" data-category="Fasting" data-audience="Youth &amp; Young Adults" data-summary="fasting begins in eden: the very first commandment concerned eating. this lesson traces the shift from the original plant-based diet to meat after the flood, explains why we fast — to return toward the original state, to purify body and soul, and to grow through self-denial — and surveys the seven fasts of the orthodox church.">
+  <div class="meta"><span class="cat-chip"><svg viewBox="0 0 24 24"><path d="M10 10h4v11h-4zM12 10V7"/><path d="M12 2c1.6 1.6 1.6 3.2 0 4.5-1.6-1.3-1.6-2.9 0-4.5z"/><path d="M7 21h10"/></svg>Fasting</span><span class="tag">Youth &amp; Young Adults</span><span class="tag">Week 22</span></div>
+  <h3><a href="lessons/orthodox-fasting.html">The Purpose and Practice of Fasting</a></h3>
+  <p>Fasting begins in Eden: the very first commandment concerned eating. This lesson traces the shift from the original plant-based diet to meat after the Flood, ex&hellip;</p>
+  <div class="links"><a href="lessons/orthodox-fasting.html">Read lesson</a> &middot; <a href="downloads/Orthodox_Fasting_Lesson_Slides.pptx" download>Download slides</a></div>
+</div>
+</div>
+<div class="divider">&#10016; &#10016; &#10016;</div>
+<h2 class="section-title">How to Use This Site</h2>
+<div class="grid">
+  <div class="card"><h3>For Students</h3><p>Open any lesson to review what was taught in class. Read the summary, look up the key verses, learn the key terms, and test yourself with the quiz at the bottom of each lesson.</p></div>
+  <div class="card"><h3>For Parents</h3><p>Each lesson page shows exactly what your children are learning — the objectives, the Scriptures, and the teaching points — so you can continue the conversation at home.</p></div>
+  <div class="card"><h3>For Teachers &amp; Deacons</h3><p>Download the full slide decks from the Download Center. Lessons drawn from the parish curriculum are marked with their week number, with sources cited on every page.</p></div>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="cross">&#10016;</div>
+  <p>Lessons by Dn Yonnas &middot; Debre Nazreth St. Mary &amp; St. Gabriel Ethiopian Orthodox Tewahedo Church</p>
+  <p>Curriculum lessons follow the <em>Sunday School Curriculum in English, Level V</em>, compiled by Kesis Solomon Mulugeta Zewde (PhD).</p>
+  <p>All teaching is offered in the faith of the Ethiopian Orthodox Tewahedo Church. Questions of doctrine should always be brought to your father confessor or parish priest.</p>
+  <p>Glory be to the Father, the Son, and the Holy Spirit, one God. Amen.</p>
+</footer>
+</body>
+</html>
