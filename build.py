@@ -62,6 +62,7 @@ THEMES = {
 LESSONS = [
  dict(slug="holy-trinity", title="Lesson on the Holy Trinity",
   category="Holy Trinity", audience="Youth & Young Adults", file="Holy_Trinity_Lesson_Slides.pptx",
+  extras=[("Pre-Lesson Reading (DOCX)", "Holy_Trinity_PreReading.docx")],
   summary="An introduction to the Church's confession of one God in three Persons, built on the Nicene Creed. The lesson explains one divine Nature and three distinct Persons, the meaning of Unbegotten, Begotten, and Proceeding, the 'Two Hands of God' teaching of St. Irenaeus, and the Fathers' analogy of fire — always with the reminder that every analogy falls short of the Mystery.",
   objectives=["Confess one God in three Persons according to the Nicene Creed",
     "Explain the eternal distinctions: the Father unbegotten, the Son begotten, the Holy Spirit proceeding",
@@ -758,6 +759,78 @@ LESSONS = [
      ["Forgetfulness", "Slackness", "Patience — not willing that any should perish", "A test with no purpose"], 2)],
   sources=[CIT_SLIDES, CIT_SCRIPTURE],
   related=["iron-sharpens-iron","guarding-time-senses"]),
+
+ dict(slug="love-forgiveness", title="Love and Forgiveness: The Transforming Cycle of Grace",
+  category="Moral & Spiritual Life", audience="Youth & Young Adults", file="Love_And_Forgiveness_Lesson_Slides.pptx",
+  summary="From the Fall to the Cross to a transformed life: how the Fall grieved the heart of a loving Father, how God's plan of salvation answered the dilemma of the unholy living with the Holy, what our forgiveness cost Christ, and why forgiving others is the prerequisite for receiving God's mercy ourselves.",
+  objectives=["See the Fall as a broken communion that grieved God's fatherly love, not merely a broken rule",
+    "Understand the Cross as God's answer to the dilemma: how can the unholy live with the Holy?",
+    "Practice forgiveness of others as the prerequisite for asking God's forgiveness"],
+  verses=["Genesis 3:9 — \"Where are you?\" — the Father seeking His hidden children",
+    "John 3:16 — \"For God so loved the world that He gave His only begotten Son\"",
+    "Matthew 6:14–15 — \"if you forgive men their trespasses, your heavenly Father will also forgive you\"",
+    "1 John 4:7 — \"let us love one another, for love is of God\""],
+  points=["The Fall was a spiritual separation — God's children hiding, blaming, and exiled from communion",
+    "Even in the moment of judgment, God's love provided a path back — He never abandoned His children",
+    "Our tradition treasures God's promise to Adam of salvation after 5,500 years — love deferred is not love denied",
+    "Love is constant, not conditional — and therefore love inevitably carries suffering, as a mother's love does",
+    "Our forgiveness cost Christ everything: the agony of Gethsemane, the Cross, the full weight of every sin",
+    "Before asking God to forgive you, forgive your neighbor — mercy received is tied to mercy given",
+    "The goal is not only to be forgiven but to be transformed: to learn God's nature, experience it, and emulate it"],
+  discussion=["Why does it matter that the Fall hurt God as a Father, not only offended Him as a Judge?",
+    "Having seen the depth of His love, is His command to love too much to ask?",
+    "Who do you need to forgive before you next ask God for forgiveness?"],
+  challenge=["Before your prayers each night this week, name anyone you have not forgiven — and forgive them first",
+    "Do one act of unearned kindness for someone who wronged you",
+    "Memorize Matthew 6:14–15",
+    "Reflect: which of love's faces (sympathy, forgiveness, understanding, patience, fair judgment) is weakest in you?"],
+  terms=[("Grace", "God's own life and power freely given — undeserved, transforming, and received through the life of the Church."),
+    ("Theosis", "Becoming like God by His grace — united with Him, never becoming God by nature."),
+    ("The 5,500-year promise", "The Church's tradition of God's covenant with Adam: that after 5,500 years the Savior would come and restore him.")],
+  quiz=[("In this lesson, the Fall of Adam and Eve is presented above all as:",
+     ["A broken rule requiring punishment", "A broken communion that grieved a loving Father", "A myth with a moral", "Adam's problem alone"], 1),
+    ("According to Matthew 6:14–15, receiving God's forgiveness is tied to:",
+     ["Fasting strictly", "Our willingness to forgive others", "Public confession", "Good intentions"], 1),
+    ("The goal of the Christian life in this lesson is:",
+     ["Only to be forgiven", "To avoid punishment", "To be transformed — learning, experiencing, and emulating God's nature", "To feel loved"], 2)],
+  sources=[CIT_SLIDES, CIT_SCRIPTURE],
+  related=["penance","iron-sharpens-iron"]),
+
+ dict(slug="great-lent", title="Great Lent and the Victory of the Resurrection",
+  category="Fasting", audience="Whole Parish", file="Great_Lent_Lesson_Notes.docx", file_label="Lesson Notes (DOCX)",
+  summary="A lesson for the season of Abiy Tsom and Fasika: the three phases of the journey — Great Lent, Holy Week, and the Feast of the Resurrection — followed by the fifty days of celebration until Pentecost. The Church is the hospital of the soul where we find the Body and Blood of Christ, and we, the youth, are her future.",
+  objectives=["Know the three phases: Abiy Tsom (prepare, repent, fast, pray), Holy Week (walk with Christ to the Cross), and Fasika (celebrate His victory over death)",
+    "Understand theosis rightly: united with God by grace, never becoming God by nature",
+    "Receive the Church as the hospital of the soul and the Eucharist as the medicine of immortality"],
+  verses=["1 Corinthians 15:54–57 — \"O Death, where is your sting? O Hades, where is your victory?\"",
+    "John 6:56 — \"He who eats My flesh and drinks My blood abides in Me, and I in him\"",
+    "1 John 2:6 — \"He who says he abides in Him ought himself also to walk just as He walked\""],
+  points=["Great Lent is a long season of fasting, prayer, repentance, and self-denial preparing us for the Resurrection",
+    "After Fasika we celebrate for fifty days until Pentecost; the Wednesday and Friday fasts are suspended",
+    "The Oriental Orthodox Church is the apostolic Church preserved by the Apostles and Church Fathers",
+    "St. Athanasius: \"God became man so that man could become god\" — by grace, never by nature",
+    "The Church is a hospital that heals and transforms us through her traditions and Sacraments",
+    "In Holy Communion we partake of Christ's true Body and Blood and share in His death and Resurrection",
+    "We are the future of the Church — the baton was first handed to us by Christ Himself"],
+  discussion=["Which phase of the Lenten journey is hardest for you, and why?",
+    "What does it mean that the Church is a hospital rather than a courtroom?",
+    "What is your role — deacon, mezemuran, student — in carrying the Church's legacy forward?"],
+  challenge=["Keep the fast of the season with attention to prayer, not only food",
+    "Attend Holy Week services and walk the journey with Christ deliberately",
+    "Prepare for Communion through confession during the fast",
+    "Invite one newcomer to the Friday theology class"],
+  terms=[("Abiy Tsom", "The Great Fast (Great Lent) — the Church's longest fast, preparing for the Feast of the Resurrection."),
+    ("Fasika", "The Feast of the Resurrection (Easter) — the victory of Christ over death."),
+    ("Hosanna", "Palm Sunday — the Lord's entry into Jerusalem, opening Holy Week."),
+    ("Pentecost", "The descent of the Holy Spirit fifty days after the Resurrection — the close of the paschal celebration.")],
+  quiz=[("What are the three phases of the lesson's Lenten journey?",
+     ["Advent, Christmas, Epiphany", "Great Lent, Holy Week, Fasika", "Fasting, almsgiving, pilgrimage", "Confession, Communion, Chrismation"], 1),
+    ("St. Athanasius' saying, 'God became man so that man could become god,' means:",
+     ["We become God by nature", "We become equal to God", "We are united with God by grace and grow into His likeness", "Only saints are saved"], 2),
+    ("During the fifty days after Fasika:",
+     ["The fasting becomes stricter", "The Wednesday and Friday fasts are suspended in celebration", "The Church closes", "A new fast begins immediately"], 1)],
+  sources=[CIT_SLIDES.replace("Lesson slides", "Lesson notes"), CIT_SCRIPTURE, "St. Athanasius of Alexandria, <em>On the Incarnation</em> (the famous saying quoted in the lesson)"],
+  related=["orthodox-fasting","holy-cross"]),
 ]
 
 # Extra glossary entries beyond per-lesson terms
@@ -784,13 +857,60 @@ VERSES_ROTATOR = [
 ]
 
 NAV_ITEMS = [("index.html","Home"),("start-here.html","Start Here"),("lessons.html","Lesson Library"),
-             ("curriculum.html","Curriculum"),("glossary.html","Glossary"),("downloads.html","Download Center")]
+             ("curriculum.html","Curriculum"),("glossary.html","Glossary"),("resources.html","Resources"),
+             ("downloads.html","Download Center")]
+
+# Verified external Oriental Orthodox resources (checked June 2026)
+RESOURCES = [
+ ("Official Ethiopian Orthodox Tewahedo Church", [
+  ("The Ethiopian Orthodox Tewahedo Church (official site)", "https://www.ethiopianorthodox.org/english/indexenglish.html",
+   "The Church's official English site: teachings, history, the Liturgy in English, sermons, and teaching materials for children."),
+  ("The 81 Canonical Books of the EOTC", "https://www.ethiopianorthodox.org/english/canonical/books.html",
+   "The official listing of the Church's biblical canon — 46 Old Testament and 35 New Testament books."),
+  ("EOTC Patriarchate Head Office", "https://eotceth.org/",
+   "The Patriarchate of the Ethiopian Orthodox Tewahedo Church in Addis Ababa."),
+ ]),
+ ("Sunday School & Teaching", [
+  ("Mahibere Kidusan — EOTC Sunday School Department", "https://eotcmk.org/e/",
+   "English lessons and articles from Mahibere Kidusan, serving under the Sunday Schools Department of the Holy Synod since 1991."),
+  ("Mahibere Kidusan USA", "https://us.eotcmk.org/",
+   "The US branch of Mahibere Kidusan, with youth and campus ministry resources in English."),
+ ]),
+ ("Scripture & the Saints", [
+  ("The Orthodox Study Bible", "https://store.ancientfaith.com/orthodox-study-bible/",
+   "The study Bible quoted in our parish curriculum — Septuagint-based Old Testament with commentary from the Church Fathers."),
+  ("The Book of the Saints of the Ethiopian Church (Synaxarium)", "https://archive.org/details/bookofsaintsofet0001unse",
+   "E. A. Wallis Budge's translation of the Ethiopic Synaxarium — the source for our saints' lessons."),
+ ]),
+ ("The Oriental Orthodox Family", [
+  ("Coptic Orthodox Church Network", "https://www.copticchurch.net/",
+   "Resources from our sister Church of Alexandria, including Fr. Tadros Y. Malaty's 'Introduction to the Coptic Orthodox Church.'"),
+  ("Coptic Orthodox Diocese of the Southern United States", "https://www.suscopts.org/literature/literature.php",
+   "Free doctrinal literature in English, and publisher of the Coptic Reader prayer app."),
+  ("Fr. Tadros Yacoub Malaty — Books in English", "https://st-takla.org/books/en/fr-tadros-yacoub/index.html",
+   "The full English library of Fr. Tadros Y. Malaty, whose works are cited in our media and time lesson — hosted with the author's permission."),
+  ("The Agpeya — Book of Hours", "https://st-takla.org/Agpeya.html",
+   "The Coptic Orthodox prayer book of the seven canonical hours, in English."),
+ ]),
+]
 
 # Curriculum weeks (extracted from the Level V curriculum) -> taught lessons on this site
 WEEK_TO_LESSON = {2: "holy-cross", 14: "st-luke", 19: "trinitarianism-monotheism",
                   22: "orthodox-fasting", 32: "guarding-time-senses", 34: "guarding-time-senses"}
 with open(os.path.join(ROOT, "curriculum.json"), encoding="utf-8") as f:
     CURRICULUM = json.load(f)
+# Levels I-IV (PreK-Grade 9), extracted from the parish's other curricula
+with open(os.path.join(ROOT, "curricula_extra.json"), encoding="utf-8") as f:
+    CURRICULA_EXTRA = json.load(f)
+LEVEL_LABELS = {lv["key"]: lv["label"] for lv in CURRICULA_EXTRA}
+LEVEL_SOURCES = {
+ "level-1": "Level I (Pre-KG and KG)", "level-2": "Level II (Grade 2 to Grade 3)",
+ "level-3": "Level III (Grade 4 to Grade 6)", "level-4": "Level IV (Grade 7 to Grade 9)",
+}
+
+import re as _re
+def sg_name(l):
+    return _re.sub(r'_Lesson_Slides\.pptx$|_Lesson_Notes\.docx$', '', l["file"]) + "_StudyGuide.pdf"
 
 def theme(l): return THEMES[l["category"]]
 def icon_svg(l): return ICONS[theme(l)["icon"]]
@@ -976,7 +1096,9 @@ def lesson_page(l):
 {quiz_section(l)}
 <div class="download-box">
   <strong>Lesson Materials</strong><br>
-  <a class="btn" href="../downloads/{l['file']}" download>&#11015; Download Slides (PPTX)</a>
+  <a class="btn" href="../downloads/{l['file']}" download>&#11015; Download {l.get('file_label','Slides (PPTX)')}</a>
+  <a class="btn secondary" href="../downloads/{sg_name(l)}" download>&#11015; Study Guide (PDF)</a>
+  {"".join(f'<a class="btn secondary" href="../downloads/{ef}" download>&#11015; {elabel}</a>' for elabel, ef in l.get('extras', []))}
 </div>
 {sources_section(l)}
 <div class="lesson-section">
@@ -1075,15 +1197,49 @@ lessons_body = f"""
 # downloads.html
 # ---------------------------------------------------------------
 rows = "\n".join(
-    f"""<tr><td><a href="lessons/{l['slug']}.html">{html.escape(l['title'])}</a></td><td>{html.escape(l['category'])}</td><td>{html.escape(l.get('week','—'))}</td><td><a href="downloads/{l['file']}" download>{html.escape(l['file'])}</a></td></tr>"""
+    f"""<tr><td><a href="lessons/{l['slug']}.html">{html.escape(l['title'])}</a></td><td>{html.escape(l['category'])}</td><td><a href="downloads/{l['file']}" download>{l.get('file_label','Slides')}</a></td><td><a href="downloads/{sg_name(l)}" download>Study Guide</a></td></tr>"""
     for l in sorted(LESSONS, key=lambda x: (x["category"], x["title"])))
+
+LIBRARY = [
+ ("Doctrine & Dogma", [
+  ("Dogma_Kesis_Solomon.pdf", "Dogma — Kesis Solomon", "An overview of the unchanging dogmas of the Church."),
+  ("We_Believe_In_One_God_Part1.pdf", "We Believe in One God — Part 1", "The oneness of God: God is one and has no partners."),
+  ("We_Believe_In_One_God_Part2.pdf", "We Believe in One God — Part 2", "Continuing the doctrine of the oneness of God."),
+  ("We_Believe_In_One_God_Part3.pdf", "We Believe in One God — Part 3", "Continuing the doctrine of the oneness of God."),
+  ("We_Believe_In_One_God_Part4.pdf", "We Believe in One God — Part 4", "Continuing the doctrine of the oneness of God."),
+  ("We_Believe_In_One_God_Part5.pdf", "We Believe in One God — Part 5", "Concluding the doctrine of the oneness of God."),
+  ("Divinity_Of_Our_Lord_Jesus_Christ.pdf", "The Divinity of Our Lord Jesus Christ", "The scriptural witness that Christ is true God."),
+  ("Divinity_Of_The_Holy_Spirit.pdf", "The Divinity of the Holy Spirit", "The scriptural witness that the Holy Spirit is true God."),
+  ("EOTC_Doctrine_Virgin_Mary_And_Intercession.pdf", "The EOTC Doctrine on the Virgin Mary and Intercession", "The Church's official teaching on the Theotokos and the intercession of the saints."),
+  ("EOTC_Our_Beliefs_And_Values.pdf", "EOTC — Our Beliefs and Values", "A summary of what the Ethiopian Orthodox Tewahedo Church believes and lives."),
+ ]),
+ ("The Sacraments", [
+  ("Seven_Sacraments_Holy_Orders.pdf", "The Seven Sacraments: Holy Orders", "The sacrament of ordination — bishops, priests, and deacons."),
+ ]),
+ ("Handbooks", [
+  ("Sunday_School_Students_Handbook.pdf", "Sunday School Students Handbook", "The parish handbook for Sunday School students."),
+  ("Sunday_School_Parents_Handbook.pdf", "Sunday School Parents Handbook", "The parish handbook for parents."),
+ ]),
+]
+lib_sections = ""
+for sec_title, items in LIBRARY:
+    lib_rows = "\n".join(
+        f"""<tr><td><a href="downloads/library/{f}" download>{html.escape(t)}</a></td><td>{html.escape(d)}</td></tr>"""
+        for f, t, d in items)
+    lib_sections += f"""<h2 class="section-title">{sec_title}</h2>
+<table class="dl"><tr><th>Document</th><th>About</th></tr>{lib_rows}</table>"""
+
 downloads_body = f"""
 <h2 class="section-title">Download Center</h2>
-<p>Full slide decks (PowerPoint) for every lesson. Click a file name to download. Lessons drawn from the parish curriculum show their curriculum week. Study guides, handouts, and quizzes will be added here as they are prepared.</p>
+<p>Slides and a printable study guide for every lesson, plus the Parish Library of doctrinal documents below. Click any link to download.</p>
 <table class="dl">
-  <tr><th>Lesson</th><th>Category</th><th>Curriculum</th><th>Slides</th></tr>
+  <tr><th>Lesson</th><th>Category</th><th>Slides / Notes</th><th>Study Guide (PDF)</th></tr>
 {rows}
 </table>
+<div class="divider">&#10016; &#10016; &#10016;</div>
+<h2 class="section-title">The Parish Library</h2>
+<p>Doctrinal and teaching documents from our parish's Sunday School program (from the parish course materials compiled under Kesis Solomon Mulugeta Zewde (PhD), Debre Nazareth St. Mary &amp; St. Gabriel EOTC). These are the Church's own teaching documents — excellent for deeper study and teacher preparation.</p>
+{lib_sections}
 """
 
 # ---------------------------------------------------------------
@@ -1125,13 +1281,13 @@ PATH = [
  ("The Story of the Church", "How the faith came down to us: the Fathers, the councils, and the Cross.",
   ["early-church-fathers","holy-cross"]),
  ("The Life of the Church", "The holy mysteries and disciplines that heal and feed the believer.",
-  ["penance","holy-matrimony","orthodox-fasting"]),
+  ["penance","holy-matrimony","orthodox-fasting","great-lent"]),
  ("The Scriptures", "Walk through the New Testament with the mind of the Church.",
   ["book-of-acts","book-of-romans","book-of-ephesians","book-of-philippians","book-of-colossians"]),
  ("The Saints and Their Prayers", "The cloud of witnesses who intercede for us and show us the way.",
   ["st-luke","st-tekle-haimanot","intercession"]),
  ("Living the Faith Daily", "Practical lessons for the spiritual life of a young Orthodox Christian.",
-  ["guarding-time-senses","iron-sharpens-iron","patience"]),
+  ["love-forgiveness","guarding-time-senses","iron-sharpens-iron","patience"]),
 ]
 stages = ""
 for stage_title, stage_desc, slugs in PATH:
@@ -1145,7 +1301,7 @@ start_body = f"""
 </ol>
 <div class="hero">
   <h3 style="color:var(--maroon);margin-top:0;">About These Lessons</h3>
-  <p>Lessons marked with a week number follow the <em>Sunday School Curriculum in English, Level V (High School and College)</em>, compiled by Kesis Solomon Mulugeta Zewde (PhD) for Debre Nazareth St. Mary &amp; St. Gabriel EOTC. Saints' lives draw on the Ethiopic Synaxarium (<em>The Book of the Saints of the Ethiopian Church</em>). Full citations appear at the bottom of every lesson page.</p>
+  <p>Lessons marked with a week number follow our parish's general Sunday School class curriculum — the <em>Sunday School Curriculum in English, Level V (High School and College)</em>, compiled by Kesis Solomon Mulugeta Zewde (PhD) for Debre Nazareth St. Mary &amp; St. Gabriel EOTC — a full formation course that includes theology alongside the commandments, Scripture, and Christian living. Saints' lives draw on the Ethiopic Synaxarium (<em>The Book of the Saints of the Ethiopian Church</em>). Full citations appear at the bottom of every lesson page.</p>
 </div>
 """
 
@@ -1176,13 +1332,13 @@ def curriculum_body_html(w):
     flush()
     return "\n".join(out)
 
-def curriculum_week_page(w):
+def curriculum_week_page(w, level_label="Level V Curriculum", level_source="Level V (High School and College)", taught_map=True):
     n = w["week"]
     objectives = "".join(f"<li>{html.escape(o)}</li>" for o in w["objectives"])
     memory = "".join(f'<div class="verse-block">{html.escape(m)}</div>' for m in w["memory_verse"])
     refs = "".join(f"<li>{html.escape(r)}</li>" for r in w["references"])
     taught = ""
-    if n in WEEK_TO_LESSON:
+    if taught_map and n in WEEK_TO_LESSON:
         l = BY_SLUG[WEEK_TO_LESSON[n]]
         taught = (f'<div class="download-box"><strong>Taught in our class</strong><br>'
                   f'Dn Yonnas has taught this curriculum lesson — see '
@@ -1190,9 +1346,9 @@ def curriculum_week_page(w):
                   f'for the slides, quiz, and study material.</div>')
     body = f"""
 <div class="lesson-head">
-  <div class="meta"><span class="tag">Level V Curriculum</span> <span class="tag">Week {n}</span></div>
+  <div class="meta"><span class="tag">{html.escape(level_label)}</span> <span class="tag">Week {n}</span></div>
   <h2>Week {n}: {html.escape(w['title'])}</h2>
-  <p class="byline">From the Sunday School Curriculum in English, Level V — compiled by Kesis Solomon Mulugeta Zewde (PhD)</p>
+  <p class="byline">From the Sunday School Curriculum in English, {html.escape(level_source)} — compiled by Kesis Solomon Mulugeta Zewde (PhD)</p>
 </div>
 <div class="lesson-section">
   <h3>Objectives</h3>
@@ -1210,41 +1366,55 @@ def curriculum_week_page(w):
 <div class="lesson-section">
   <h3>References</h3>
   <ul>{refs}</ul>
-  <p><em>Source:</em> {CIT_CURRICULUM} — Week {n}.</p>
+  <p><em>Source:</em> Kesis Solomon Mulugeta Zewde (PhD), <em>Sunday School Curriculum in English, {html.escape(level_source)}</em>, Debre Nazareth St. Mary &amp; St. Gabriel Ethiopian Orthodox Tewahedo Church, St. Louis, MO — Week {n}.</p>
   <p><a href="../curriculum.html">&larr; Back to the Curriculum</a></p>
 </div>
 """
     return page(f"Week {n}: {w['title']}", body, depth=1)
 
-def curriculum_index():
-    cards = ""
-    for w in CURRICULUM:
-        n = w["week"]
-        obj = html.escape(w["objectives"][0]) if w["objectives"] else ""
-        taught = ""
-        if n in WEEK_TO_LESSON:
-            l = BY_SLUG[WEEK_TO_LESSON[n]]
-            taught = f'<br><a href="lessons/{l["slug"]}.html">Taught in class &rarr;</a>'
-        cards += f"""<div class="card" data-title="{html.escape(w['title'].lower())}" data-summary="{obj.lower()}">
-  <div class="meta"><span class="tag">Week {n}</span>{'<span class="tag">Taught in class</span>' if n in WEEK_TO_LESSON else ''}</div>
-  <h3><a href="curriculum/week-{n}.html">{html.escape(w['title'])}</a></h3>
+def week_card(w, href, week_tag, taught=False):
+    obj = html.escape(w["objectives"][0]) if w["objectives"] else ""
+    taught_link = ""
+    if taught:
+        l = BY_SLUG[WEEK_TO_LESSON[w["week"]]]
+        taught_link = f'<br><a href="lessons/{l["slug"]}.html">Taught in class &rarr;</a>'
+    return f"""<div class="card" data-title="{html.escape(w['title'].lower())}" data-summary="{obj.lower()}">
+  <div class="meta"><span class="tag">{week_tag}</span>{'<span class="tag">Taught in class</span>' if taught else ''}</div>
+  <h3><a href="{href}">{html.escape(w['title'])}</a></h3>
   <p>{obj}</p>
-  <div class="links"><a href="curriculum/week-{n}.html">Read the lesson</a>{taught}</div>
+  <div class="links"><a href="{href}">Read the lesson</a>{taught_link}</div>
 </div>"""
+
+def curriculum_index():
+    cards = "".join(
+        week_card(w, f"curriculum/week-{w['week']}.html", f"Week {w['week']}", taught=w["week"] in WEEK_TO_LESSON)
+        for w in CURRICULUM)
+    level_sections = ""
+    for lv in CURRICULA_EXTRA:
+        lv_cards = "".join(
+            week_card(w, f"curriculum/{lv['key']}-week-{w['week']}.html", f"Week {w['week']}")
+            for w in lv["weeks"])
+        level_sections += f"""
+<div class="divider">&#10016; &#10016; &#10016;</div>
+<h2 class="section-title">{html.escape(lv['label'])}</h2>
+<div class="grid level-grid">{lv_cards}</div>"""
     body = f"""
-<h2 class="section-title">Level V Curriculum (High School &amp; College)</h2>
-<p>The full year of Sunday School lessons from the <em>Sunday School Curriculum in English, Level V</em>, compiled by Kesis Solomon Mulugeta Zewde (PhD) for our parish. Each week includes objectives, a memory verse, the lesson text, and references. Weeks marked &ldquo;Taught in class&rdquo; link to the matching theology-class lesson with slides and a quiz.</p>
+<h2 class="section-title">The Parish Curriculum Library</h2>
+<p>The complete Sunday School curricula of our parish for every age level, compiled by Kesis Solomon Mulugeta Zewde (PhD) — a full formation course of the Ten Commandments, Christian living, Scripture, the saints, Church fasts, and theology woven throughout. Each week includes objectives, a memory verse, the lesson text, and references. The search box covers all levels.</p>
 <div class="filters">
-  <input type="search" id="cq" placeholder="Search curriculum weeks&hellip;">
+  <input type="search" id="cq" placeholder="Search all curriculum weeks&hellip;">
 </div>
+<h2 class="section-title">Level V — High School &amp; College (our class)</h2>
+<p>Weeks marked &ldquo;Taught in class&rdquo; link to the matching theology-class lesson with slides and a quiz.</p>
 <div class="grid" id="weekGrid">
 {cards}
 </div>
+{level_sections}
 <p id="noResults">No weeks match your search.</p>
 <script>
 (function() {{
   var q = document.getElementById('cq');
-  var cards = Array.prototype.slice.call(document.querySelectorAll('#weekGrid .card'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.grid .card'));
   q.addEventListener('input', function() {{
     var term = q.value.trim().toLowerCase(), shown = 0;
     cards.forEach(function(el) {{
@@ -1274,9 +1444,91 @@ write("start-here.html", page("Start Here", start_body, active="start-here.html"
 write("lessons.html", page("Lesson Library", lessons_body, active="lessons.html"))
 write("glossary.html", page("Glossary", glossary_body, active="glossary.html"))
 write("downloads.html", page("Download Center", downloads_body, active="downloads.html"))
+def resources_page():
+    sections = ""
+    for title, items in RESOURCES:
+        cards = "".join(
+            f'''<div class="card"><h3><a href="{url}">{html.escape(name)}</a></h3><p>{html.escape(desc)}</p>
+<div class="links"><a href="{url}">Visit &rarr;</a></div></div>'''
+            for name, url, desc in items)
+        sections += f'<h2 class="section-title">{html.escape(title)}</h2><div class="grid">{cards}</div><div class="divider">&#10016;</div>'
+    body = f"""
+<h2 class="section-title">On This Site</h2>
+<div class="grid">
+  <div class="card"><h3><a href="creed.html">The Nicene Creed</a></h3><p>The confession of faith we recite in every Kidassie, with links to the lessons that teach it.</p><div class="links"><a href="creed.html">Read &rarr;</a></div></div>
+  <div class="card"><h3><a href="feasts-fasts.html">Feasts &amp; Fasts of the Church</a></h3><p>The seven fasts and the major feasts of our Lord, with Ethiopian and Gregorian dates.</p><div class="links"><a href="feasts-fasts.html">Read &rarr;</a></div></div>
+</div>
+<div class="divider">&#10016;</div>
+<h2 class="section-title">Trusted Orthodox Resources</h2>
+<p>A vetted collection of official and trustworthy Ethiopian Orthodox Tewahedo and Oriental Orthodox resources for deeper study. These are the kinds of sources our lessons draw from. As always, bring questions of doctrine to your father confessor or parish priest.</p>
+{sections}
+<div class="hero">
+  <h3 style="color:var(--maroon);margin-top:0;">A Word of Guidance</h3>
+  <p>Not everything online that calls itself &ldquo;Orthodox&rdquo; teaches the faith of the Ethiopian Orthodox Tewahedo Church. When studying from the internet, prefer official Church sources like those above, note whether a site is Oriental Orthodox (our family of churches) or from another tradition, and verify anything surprising with a priest before teaching it to others.</p>
+</div>
+"""
+    return page("Resources", body, active="resources.html")
+
+def creed_page():
+    body = """
+<h2 class="section-title">The Nicene Creed</h2>
+<p>The Creed of the 318 Fathers of Nicaea (325 AD), completed at Constantinople (381 AD) — the confession of faith we recite in every Kidassie. Note that in the Orthodox confession the Holy Spirit proceeds <em>from the Father</em>; the Church does not accept the later Latin addition (&ldquo;and the Son&rdquo;). The wording below is a standard English rendering; for liturgical use, follow the translation in our parish service book.</p>
+<div class="lesson-section">
+<p>We believe in one God, the Father Almighty, Maker of heaven and earth, and of all things visible and invisible.</p>
+<p>And in one Lord Jesus Christ, the only-begotten Son of God, begotten of the Father before all worlds; Light of Light, true God of true God, begotten, not made, being of one essence with the Father, by Whom all things were made; Who for us men and for our salvation came down from heaven, and was incarnate of the Holy Spirit and of the Virgin Mary, and became man; and He was crucified for us under Pontius Pilate, and suffered, and was buried; and the third day He rose again, according to the Scriptures; and ascended into heaven, and sits at the right hand of the Father; and He shall come again with glory to judge the living and the dead; Whose kingdom shall have no end.</p>
+<p>And we believe in the Holy Spirit, the Lord, the Giver of Life, Who proceeds from the Father; Who with the Father and the Son together is worshipped and glorified; Who spoke by the prophets.</p>
+<p>And we believe in one, holy, universal, and apostolic Church. We confess one baptism for the remission of sins; and we look for the resurrection of the dead, and the life of the world to come. Amen.</p>
+</div>
+<div class="lesson-section">
+<h3>Study the Creed</h3>
+<p>The Creed is taught across our lessons: <a href="lessons/holy-trinity.html">the Holy Trinity</a> (one essence, three Persons), <a href="lessons/trinitarianism-monotheism.html">Trinitarianism and Monotheism</a> (one God, three Hypostases), and <a href="lessons/st-cyril.html">St. Cyril of Alexandria</a> (the one incarnate Christ).</p>
+</div>
+"""
+    return page("The Nicene Creed", body)
+
+def feasts_page():
+    body = """
+<h2 class="section-title">Feasts &amp; Fasts of the Church</h2>
+<p>A quick reference to the Church's calendar of feasting and fasting. Ethiopian calendar dates are given with their usual Gregorian equivalents; movable feasts depend on the date of Fasika each year. <strong>Always confirm this year's dates with the parish calendar and your priest</strong> — this page is a study aid, not a liturgical calendar.</p>
+
+<h2 class="section-title">The Seven Fasts</h2>
+<div class="lesson-section"><ul>
+<li><strong>Wednesdays &amp; Fridays</strong> — kept year-round (except the fifty days after Fasika): Wednesday remembers the betrayal of the Lord; Friday, His Crucifixion.</li>
+<li><strong>Abiy Tsom (the Great Lent)</strong> — the longest and most solemn fast, preparing for Holy Week and the Feast of the Resurrection.</li>
+<li><strong>Tsome Nebiyat (the Fast of the Prophets / Advent)</strong> — preparing for the Nativity of our Lord.</li>
+<li><strong>Tsome Hawaryat (the Fast of the Apostles)</strong> — following Pentecost, in the apostles' footsteps before their mission.</li>
+<li><strong>Tsome Nineveh (the Fast of Nineveh)</strong> — three days, remembering Nineveh's repentance at the preaching of Jonah.</li>
+<li><strong>Filseta (the Fast of the Assumption of St. Mary)</strong> — Nehase 1–16, beloved especially in the Ethiopian Church, ending with the feast of her Assumption.</li>
+<li><strong>Gahad (the Eves of Nativity and Epiphany)</strong> — the vigil fasts before Genna and Timket.</li>
+</ul>
+<p>For the meaning and practice of fasting, see <a href="lessons/orthodox-fasting.html">our fasting lesson</a> and <a href="lessons/great-lent.html">the Great Lent lesson</a>.</p></div>
+
+<h2 class="section-title">Major Feasts of Our Lord</h2>
+<div class="lesson-section"><ul>
+<li><strong>Genna (Nativity)</strong> — Tahsas 29 (January 7): the birth of our Lord in the flesh.</li>
+<li><strong>Timket (Epiphany)</strong> — Tir 11 (January 19): the Baptism of our Lord in the Jordan and the revelation of the Holy Trinity.</li>
+<li><strong>Hosanna (Palm Sunday)</strong> — movable: the Lord's entry into Jerusalem.</li>
+<li><strong>Siklet (the Crucifixion, Good Friday)</strong> — movable: the saving Passion and Cross.</li>
+<li><strong>Fasika (the Resurrection)</strong> — movable: the Feast of Feasts, Christ's victory over death.</li>
+<li><strong>Erget (the Ascension)</strong> — movable, forty days after Fasika.</li>
+<li><strong>Paraclete (Pentecost)</strong> — movable, fifty days after Fasika: the descent of the Holy Spirit.</li>
+<li><strong>Debre Tabor (the Transfiguration)</strong> — Nehase 13 (August 19).</li>
+<li><strong>Meskel (the Finding of the True Cross)</strong> — Meskerem 17 (September 27), with the Demera bonfire; see <a href="lessons/holy-cross.html">the Holy Cross lesson</a>.</li>
+</ul></div>
+"""
+    return page("Feasts & Fasts", body)
+
+write("creed.html", creed_page())
+write("feasts-fasts.html", feasts_page())
+write("resources.html", resources_page())
 write("curriculum.html", curriculum_index())
 for w in CURRICULUM:
     write(f"curriculum/week-{w['week']}.html", curriculum_week_page(w))
+for lv in CURRICULA_EXTRA:
+    for w in lv["weeks"]:
+        write(f"curriculum/{lv['key']}-week-{w['week']}.html",
+              curriculum_week_page(w, level_label=lv["label"],
+                                   level_source=LEVEL_SOURCES[lv["key"]], taught_map=False))
 for l in LESSONS:
     write(f"lessons/{l['slug']}.html", lesson_page(l))
 print(f"\nDone: {6 + len(CURRICULUM) + len(LESSONS)} pages generated.")
