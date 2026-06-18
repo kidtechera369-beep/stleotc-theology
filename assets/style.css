@@ -221,6 +221,63 @@ h2.section-title {
   text-align: center;
 }
 
+/* ---------- In-depth reading (long-form prose) ---------- */
+.lesson-section.reading p { margin: 0.7rem 0; }
+.lesson-section.reading h4 {
+  color: var(--green);
+  font-size: 1.08rem;
+  margin: 1.4rem 0 0.3rem;
+}
+.lesson-section.reading h4:first-of-type { margin-top: 0.4rem; }
+.lesson-section.reading blockquote {
+  font-style: italic;
+  color: var(--green);
+  border-left: 3px solid var(--gold-light);
+  margin: 0.8rem 0;
+  padding: 0.2rem 0 0.2rem 1rem;
+}
+
+/* ---------- Home: announcement + this week's lesson ---------- */
+.announce {
+  background: #fbf1d9;
+  border: 1px solid var(--gold);
+  border-left: 6px solid var(--maroon);
+  border-radius: 8px;
+  padding: 0.9rem 1.3rem;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--shadow);
+}
+.announce-label {
+  display: inline-block;
+  font-weight: bold;
+  color: var(--maroon);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  margin-bottom: 0.2rem;
+}
+.announce p { margin: 0.2rem 0 0; }
+.this-week {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--accent, var(--green));
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 1.1rem 1.5rem 1.3rem;
+  margin-bottom: 1.4rem;
+}
+.tw-label {
+  display: inline-block;
+  color: var(--accent, var(--green));
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.this-week h2 { margin: 0.25rem 0 0.4rem; font-size: 1.5rem; }
+.this-week h2 a { color: var(--maroon); text-decoration: none; }
+.this-week h2 a:hover { color: var(--gold); }
+
 /* ---------- Tables (downloads) ---------- */
 table.dl {
   width: 100%;

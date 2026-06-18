@@ -60,6 +60,81 @@ THEMES = {
 # Lessons
 # ---------------------------------------------------------------
 LESSONS = [
+ dict(slug="ananias-and-sapphira", title="Ananias and Sapphira: Truth Before God",
+  category="Scripture", audience="Youth & Young Adults", week="Week 39",
+  byline="By Dn Yonnas — an in-depth reading inspired by the Week 39 curriculum lesson of Kesis Solomon Mulugeta Zewde (PhD)",
+  summary="An in-depth reading of Acts 5:1-11 for the Ethiopian Orthodox Tewahedo youth. Why did so severe a judgment fall on Ananias and Sapphira at the very birth of the Church? The reading shows that their sin was not keeping their money but lying to the Holy Spirit — and that Peter's words, \"You have not lied to men but to God,\" are one of Scripture's clearest witnesses that the Holy Spirit is truly God. It calls us to truthfulness, to giving from love rather than show, and to the holy fear of God.",
+  glance=dict(author="St. Luke the Evangelist",
+    written="c. A.D. 63, the second volume after his Gospel, addressed to Theophilus",
+    audience="The whole Church — the acts of the Holy Spirit through the Apostles",
+    theme="The holiness and honesty God asks of His Church, and the divinity of the Holy Spirit"),
+  objectives=["Tell the story of Ananias and Sapphira accurately from Acts 5",
+    "Explain that their sin was hypocrisy and lying to the Holy Spirit, not the keeping of their property",
+    "Show from Peter's words that the Holy Spirit is truly God",
+    "Learn to love the truth, to give in secret from the heart, and to live in the holy fear of God"],
+  verses=["Acts 5:3-4 — \"Why has Satan filled your heart to lie to the Holy Spirit?... You have not lied to men but to God.\"",
+    "Acts 5:11 — \"So great fear came upon all the church and upon all who heard these things.\"",
+    "Proverbs 9:10 — \"The fear of the Lord is the beginning of wisdom.\"",
+    "Matthew 6:3-4 — \"Do not let your left hand know what your right hand is doing... and your Father who sees in secret will reward you openly.\""],
+  reading=[
+   "## The Setting: A Church of One Heart",
+   "To understand why this story is so serious, we must first see the beauty it interrupts. At the end of Acts chapter 4, St. Luke paints a picture of the newborn Church in Jerusalem so radiant that it almost glows on the page: “the multitude of those who believed were of one heart and one soul” (Acts 4:32). No one called anything his own; those who had lands and houses sold them and laid the price at the apostles’ feet, and it was distributed to each as anyone had need. This is what the Church Fathers call koinonia — holy communion, a shared life of love. One man, a Levite from Cyprus named Joseph, gave so generously that the apostles renamed him Barnabas, “Son of Encouragement.”",
+   "It is into this atmosphere of light that Ananias and his wife Sapphira step. Chapter 5 opens with one small but heavy word in the Greek: “But.” Against all this generosity, “a certain man named Ananias, with Sapphira his wife, sold a possession.”",
+   "## What They Actually Did",
+   "Ananias and Sapphira sold a piece of property, just as Barnabas had. But they kept back part of the price for themselves — and there was nothing wrong with that. The wrong was this: they brought a portion and laid it at the apostles’ feet as though it were the whole, pretending to a total sacrifice they had not made. They wanted the honor of Barnabas without the cost of Barnabas. And they had agreed on it together, husband and wife, beforehand.",
+   "St. Peter, filled with the Holy Spirit, saw straight through the performance: “Ananias, why has Satan filled your heart to lie to the Holy Spirit and keep back part of the price of the land for yourself? While it remained, was it not your own? And after it was sold, was it not in your own control?”",
+   "Hear those words carefully, because they unlock the whole story. The land was theirs. The money was theirs. They were under no command to sell it, and after selling it they were under no command to give all of it. Peter says so plainly. So the sin was not greed for property and it was not a failure to give enough.",
+   "## The Real Sin: The Lie, Not the Money",
+   "“Why have you conceived this thing in your heart?” Peter asks. “You have not lied to men but to God.” The sin was the lie. It was hypocrisy — the wearing of a holy mask over an unholy heart. They staged a public act of total devotion in order to be admired, while privately holding back and deceiving the Church and the Apostles.",
+   "This is why the early Fathers treat Ananias and Sapphira as a warning against vainglory (the hunger to be seen and praised) and against the love of money, which the Apostle Paul calls “a root of all kinds of evil” (1 Timothy 6:10). The two sins worked together: love of money made them keep back the price, and love of human praise made them lie about it. Satan, who is “a liar and the father of lies” (John 8:44), filled the empty space in their hearts — not by force, but because they made room for him.",
+   "## “You Have Not Lied to Men but to God”",
+   "There is a treasure of doctrine hidden in this story that our Church holds dear. In verse 3 Peter says they lied “to the Holy Spirit.” In the very next breath, verse 4, he says they lied “not to men but to God.” To lie to the Holy Spirit is to lie to God — because the Holy Spirit is God.",
+   "This is one of the clearest witnesses in all of Scripture to the full divinity of the Holy Spirit, the Third Person of the Holy Trinity, “the Lord, the Giver of Life,” whom we confess in the Creed and worship together with the Father and the Son. The Holy Spirit is not a force, an influence, or an energy. He is a divine Person, and He can be sinned against, grieved, and lied to as only God can be. So this small domestic story quietly defends the same faith the Council of Constantinople defended: one God in three Persons, equal in glory.",
+   "## Why So Severe?",
+   "When Ananias heard these words, he fell down and breathed his last. About three hours later Sapphira came in, not knowing what had happened. Peter gave her the chance to tell the truth — “Tell me whether you sold the land for so much?” — and she repeated the lie. She too fell down and died, and the young men buried her beside her husband.",
+   "We should not rush past how sobering this is, and we should not pretend it is easy. Why such a judgment? The Fathers offer us a reverent answer. This happened at the foundation of the Church, in the springtime of the Holy Spirit’s descent, when the community had to be taught — once and unforgettably — that God is holy and His Church is not a stage for pretending. A small lie tolerated at the root can rot the whole tree. As when fire first fell on a careless offering in the Old Testament, God acted visibly at the beginning so that countless others, seeing it, would learn to fear and live.",
+   "Scripture does not tell us the eternal destiny of their souls; that judgment belongs to the mercy of God alone, and the Church does not presume to pronounce it. What is given to us is not a verdict on them but a warning for us. (Questions about their salvation are exactly the kind to bring to your father confessor rather than to settle on our own.)",
+   "## The Holy Fear That Followed",
+   "St. Luke tells us the result twice: “great fear came upon all the church, and upon all who heard these things.” This is the first time the word “church” (ekklesia) appears in the Book of Acts — and it appears wrapped in the fear of God. This is not the cringing terror of a slave before a tyrant. It is holy fear: awe, reverence, the wide-eyed seriousness of standing in the presence of the living and holy God. “The fear of the Lord is the beginning of wisdom.” It is the same reverence we are meant to carry when we stand in the Liturgy, approach the holy Mysteries, or make our confession.",
+   "## The Mercy Hidden in the Warning",
+   "It would be a mistake to read this only as a story about punishment. It is also, underneath, a story about mercy — because God exposes sin so that it can be healed. The tragedy of Ananias and Sapphira is that they were each given a moment to repent and chose the lie instead. Peter’s questions were open doors. Honesty would have led them to repentance; instead they doubled down.",
+   "Our Church gives us the opposite path through the Sacrament of Repentance (Confession). There we do the very thing Ananias and Sapphira refused to do: we stop pretending, we tell the truth about ourselves before God in the presence of the priest, and we receive not death but absolution and life. The God who sees the secret holding-back of the heart is the same God who “sees in secret” our hidden repentance and “will reward openly.” The story warns us against hypocrisy precisely so that we will run toward honesty.",
+   "## Living the Lesson",
+   "For us — students, families, servants of the Church — this reading asks a few honest questions. Do we tell the truth even when a lie would make us look more generous, more devout, or more impressive than we really are? Do we give and serve to be seen by people, or quietly, for the love of God? Is there a gap between the face we show at church and the heart God actually sees? And do we carry the holy fear of God — not a fear that runs from Him, but one that takes Him seriously and so cannot bear to play games with holy things?",
+   "Ananias and Sapphira teach us, by their fall, the beauty of a single, undivided heart — the very thing the Church had before they came in. May God give us that one heart: to love the truth, to give in secret, and to stand before Him without a mask.",
+  ],
+  points=["The early Church in Jerusalem shared everything in love (koinonia); Ananias and Sapphira broke that trust",
+    "Their property and money were their own — they were not required to sell or to give all (Acts 5:4)",
+    "Their sin was hypocrisy and lying to the Holy Spirit, driven by love of money and love of human praise (vainglory)",
+    "Satan 'filled their heart' because they made room for him; the responsibility remained theirs",
+    "\"You have not lied to men but to God\" shows that the Holy Spirit is truly God — a witness to the Holy Trinity",
+    "God acted visibly at the Church's foundation so that all would learn the holy fear of God",
+    "Scripture leaves their eternal fate to God's mercy; the warning is for us, not a verdict on them",
+    "The Sacrament of Confession is the honest path they refused — we tell the truth and receive life"],
+  terms=[("Koinonia", "Holy communion or fellowship — the shared life of love in the early Church, where believers held all things in common (Acts 4:32)."),
+    ("Hypocrisy", "Wearing a holy mask over an unholy heart; performing devotion outwardly while the inner reality is different. The central sin of Ananias and Sapphira."),
+    ("Vainglory", "The hunger to be seen and praised by people. It drove the lie, as they wanted the honor of total sacrifice without the reality."),
+    ("Holy fear of God", "Reverent awe before the living and holy God — not the terror of a slave, but the beginning of wisdom (Proverbs 9:10)."),
+    ("The Holy Spirit", "The Third Person of the Holy Trinity, true God, 'the Lord, the Giver of Life'; to lie to Him is to lie to God (Acts 5:3-4).")],
+  discussion=["Peter says the land and money were their own. So what exactly was their sin?",
+    "How do verses 3 and 4 together teach us that the Holy Spirit is God?",
+    "What is the difference between holy fear of God and being simply afraid of God?",
+    "Where are we tempted to 'look more devout than we are'? How does Confession heal that?",
+    "Barnabas and Ananias did almost the same outward action. What made them so different inside?"],
+  quiz=[("According to Peter, what was the sin of Ananias and Sapphira?",
+     ["Selling their property", "Keeping some of the money", "Lying to the Holy Spirit while pretending to give everything", "Refusing to join the Church"], 2),
+    ("Peter says, 'You have not lied to men but to ___.' This teaches us that the Holy Spirit is:",
+     ["An angel", "A holy force", "Truly God", "A prophet"], 2),
+    ("What came upon the whole Church after these events?",
+     ["Great joy", "Great fear (holy reverence)", "Confusion", "Persecution"], 1),
+    ("What honest path did Ananias and Sapphira refuse, which the Church offers us today?",
+     ["Almsgiving", "Fasting", "Repentance and Confession", "Pilgrimage"], 2)],
+  sources=["The Holy Scriptures, Acts of the Apostles, chapters 4-5 (Orthodox Study Bible wording where quoted)",
+    CIT_CURRICULUM + " — Week 39, 'Ananias and Sapphira,' the lesson that inspired this reading",
+    "An in-depth reading written by Dn Yonnas in the faith of the Ethiopian Orthodox Tewahedo Church",
+    "Doctrinal questions, and any question about the souls of Ananias and Sapphira, should be brought to your father confessor or parish priest"],
+  related=["book-of-acts","penance","holy-trinity"]),
+
  dict(slug="holy-trinity", title="Lesson on the Holy Trinity",
   category="Holy Trinity", audience="Youth & Young Adults", file="Holy_Trinity_Lesson_Slides.pptx",
   extras=[("Pre-Lesson Reading (DOCX)", "Holy_Trinity_PreReading.docx")],
@@ -896,7 +971,8 @@ RESOURCES = [
 
 # Curriculum weeks (extracted from the Level V curriculum) -> taught lessons on this site
 WEEK_TO_LESSON = {2: "holy-cross", 14: "st-luke", 19: "trinitarianism-monotheism",
-                  22: "orthodox-fasting", 32: "guarding-time-senses", 34: "guarding-time-senses"}
+                  22: "orthodox-fasting", 32: "guarding-time-senses", 34: "guarding-time-senses",
+                  39: "ananias-and-sapphira"}
 with open(os.path.join(ROOT, "curriculum.json"), encoding="utf-8") as f:
     CURRICULUM = json.load(f)
 # Levels I-IV (PreK-Grade 9), extracted from the parish's other curricula
@@ -962,7 +1038,7 @@ def lesson_card(l, depth=0):
   <div class="meta">{chip(l)}</div>
   <h3><a href="{p}lessons/{l['slug']}.html">{html.escape(l['title'])}</a></h3>
   <p>{html.escape(l['summary'][:160])}&hellip;</p>
-  <div class="links"><a href="{p}lessons/{l['slug']}.html">Read lesson</a> &middot; <a href="{p}downloads/{l['file']}" download>Download slides</a></div>
+  <div class="links"><a href="{p}lessons/{l['slug']}.html">Read lesson</a>{f' &middot; <a href="{p}downloads/{l["file"]}" download>Download slides</a>' if l.get('file') else ''}</div>
 </div>"""
 
 # ---------------------------------------------------------------
@@ -1043,6 +1119,22 @@ def terms_section(l):
     dl = "".join(f"<dt>{html.escape(t)}</dt><dd>{html.escape(d)}</dd>" for t, d in l["terms"])
     return f'<div class="lesson-section"><h3><span class="sicon">{icon_svg(l)}</span>Key Terms</h3><dl class="terms">{dl}</dl></div>'
 
+def reading_section(l):
+    """Render a long-form in-depth reading. Each item in l['reading'] is a string:
+    '## X' -> subheading, '> X' -> Scripture/quote blockquote, else a paragraph."""
+    if not l.get("reading"): return ""
+    blocks = ""
+    for b in l["reading"]:
+        if b.startswith("## "):
+            blocks += f"<h4>{html.escape(b[3:])}</h4>"
+        elif b.startswith("> "):
+            blocks += f"<blockquote>{html.escape(b[2:])}</blockquote>"
+        else:
+            blocks += f"<p>{html.escape(b)}</p>"
+    label = l.get("reading_label", "In-Depth Reading")
+    return (f'<div class="lesson-section reading"><h3><span class="sicon">{icon_svg(l)}</span>'
+            f'{html.escape(label)}</h3>{blocks}</div>')
+
 def sources_section(l):
     if not l.get("sources"): return ""
     items = "".join(f"<li>{s}</li>" for s in l["sources"])
@@ -1071,7 +1163,7 @@ def lesson_page(l):
 <div class="lesson-head">
   <div class="meta">{chip(l)}</div>
   <h2>{html.escape(l['title'])}</h2>
-  <p class="byline">By Dn Yonnas</p>
+  <p class="byline">{html.escape(l.get('byline', 'By Dn Yonnas'))}</p>
   <p>{html.escape(l['summary'])}</p>
   {curriculum_links(l)}
 </div>
@@ -1083,6 +1175,7 @@ def lesson_page(l):
   <h3><span class="sicon">{icon_svg(l)}</span>Key Bible Verses</h3>
   {verses}
 </div>
+{reading_section(l)}
 {special_section(l)}
 <div class="lesson-section">
   <h3><span class="sicon">{icon_svg(l)}</span>Main Teaching Points</h3>
@@ -1094,12 +1187,15 @@ def lesson_page(l):
   <ul>{disc}</ul>
 </div>
 {quiz_section(l)}
-<div class="download-box">
+{(f'''<div class="download-box">
   <strong>Lesson Materials</strong><br>
   <a class="btn" href="../downloads/{l['file']}" download>&#11015; Download {l.get('file_label','Slides (PPTX)')}</a>
   <a class="btn secondary" href="../downloads/{sg_name(l)}" download>&#11015; Study Guide (PDF)</a>
   {"".join(f'<a class="btn secondary" href="../downloads/{ef}" download>&#11015; {elabel}</a>' for elabel, ef in l.get('extras', []))}
-</div>
+</div>''') if l.get('file') else '''<div class="download-box">
+  <strong>Take this reading with you</strong><br>
+  <a class="btn" href="javascript:window.print()">&#128424; Print / Save as PDF</a>
+</div>'''}
 {sources_section(l)}
 <div class="lesson-section">
   <h3><span class="sicon">{icon_svg(l)}</span>Related Lessons</h3>
@@ -1116,7 +1212,18 @@ def lesson_page(l):
 featured = ["holy-trinity", "st-cyril", "orthodox-fasting"]
 featured_cards = "\n".join(lesson_card(BY_SLUG[s]) for s in featured)
 verses_json = json.dumps([{"t": v, "r": r} for v, r in VERSES_ROTATOR])
+tw = BY_SLUG["ananias-and-sapphira"]  # this week's featured reading
 index_body = f"""
+<div class="announce" role="note">
+  <span class="announce-label">&#9888; Announcement</span>
+  <p><strong>Dn Yonnas will be out of town this week.</strong> Class will be led by <strong>Dn Sirak</strong> — please join his class as usual at the regular time. In the meantime, this week's lesson below is an in-depth reading I prepared for you to study and pray through on your own and with your family.</p>
+</div>
+<div class="this-week" style="--accent:{theme(tw)['color']}">
+  <span class="tw-label">&#10016; This Week's Lesson</span>
+  <h2><a href="lessons/{tw['slug']}.html">{html.escape(tw['title'])}</a></h2>
+  <p>{html.escape(tw['summary'][:260])}&hellip;</p>
+  <p style="margin-bottom:0;"><a class="btn" href="lessons/{tw['slug']}.html">Read this week's lesson &rarr;</a></p>
+</div>
 <div class="hero">
   <h2>Welcome to Our Digital Classroom</h2>
   <p>This website is the study hub for the theology class of our church. Here you will find every lesson we have taught — with summaries, key Bible verses, key terms, quizzes, discussion questions, and downloadable slides — organized so that students, parents, teachers, and deacons can study, review, and grow in the faith of the Ethiopian Orthodox Tewahedo Church.</p>
@@ -1198,7 +1305,7 @@ lessons_body = f"""
 # ---------------------------------------------------------------
 rows = "\n".join(
     f"""<tr><td><a href="lessons/{l['slug']}.html">{html.escape(l['title'])}</a></td><td>{html.escape(l['category'])}</td><td><a href="downloads/{l['file']}" download>{l.get('file_label','Slides')}</a></td><td><a href="downloads/{sg_name(l)}" download>Study Guide</a></td></tr>"""
-    for l in sorted(LESSONS, key=lambda x: (x["category"], x["title"])))
+    for l in sorted(LESSONS, key=lambda x: (x["category"], x["title"])) if l.get("file"))
 
 LIBRARY = [
  ("Doctrine & Dogma", [
