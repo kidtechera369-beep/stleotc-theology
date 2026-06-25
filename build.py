@@ -1219,7 +1219,7 @@ tw = BY_SLUG["ananias-and-sapphira"]  # this week's featured reading
 index_body = f"""
 <div class="announce" role="note">
   <span class="announce-label">&#10016; Announcement</span>
-  <p><strong>Dn Yonnas is back this week</strong> and will teach this week's lesson, <em>Ananias and Sapphira</em>, in class at the regular time. A heartfelt thank you to <strong>Dn Sirak</strong> for leading the class last week. The full lesson is below — you can download the slides, or read along with the in-depth reading.</p>
+  <p><strong>Dn Yonnas is back this week</strong> and will teach this week's lesson, <em>Ananias and Sapphira</em>, in class at the regular time. A heartfelt thank you to <strong>Dn Sirak</strong> for leading the class last week. This week's in-depth reading also includes the PowerPoint slides for this lesson — <a href="lessons/{tw['slug']}.html">open this week's lesson in the Lesson Library &rarr;</a> to read it and download the slides.</p>
 </div>
 <div class="this-week" style="--accent:{theme(tw)['color']}">
   <span class="tw-label">&#10016; This Week's Lesson</span>
