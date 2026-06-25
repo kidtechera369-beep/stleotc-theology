@@ -62,7 +62,9 @@ THEMES = {
 LESSONS = [
  dict(slug="ananias-and-sapphira", title="Ananias and Sapphira: Truth Before God",
   category="Scripture", audience="Youth & Young Adults", week="Week 39",
-  byline="By Dn Yonnas — an in-depth reading inspired by the Week 39 curriculum lesson of Kesis Solomon Mulugeta Zewde (PhD)",
+  file="Ananias_and_Sapphira_Lesson_Slides.pptx",
+  file_label="Slides (PPTX) — created by Dn Yonnas",
+  byline="By Dn Yonnas — slides and in-depth reading by Dn Yonnas, inspired by the Week 39 curriculum lesson of Kesis Solomon Mulugeta Zewde (PhD)",
   summary="An in-depth reading of Acts 5:1-11 for the Ethiopian Orthodox Tewahedo youth. Why did so severe a judgment fall on Ananias and Sapphira at the very birth of the Church? The reading shows that their sin was not keeping their money but lying to the Holy Spirit — and that Peter's words, \"You have not lied to men but to God,\" are one of Scripture's clearest witnesses that the Holy Spirit is truly God. It calls us to truthfulness, to giving from love rather than show, and to the holy fear of God.",
   glance=dict(author="St. Luke the Evangelist",
     written="c. A.D. 63, the second volume after his Gospel, addressed to Theophilus",
@@ -131,6 +133,7 @@ LESSONS = [
      ["Almsgiving", "Fasting", "Repentance and Confession", "Pilgrimage"], 2)],
   sources=["The Holy Scriptures, Acts of the Apostles, chapters 4-5 (Orthodox Study Bible wording where quoted)",
     CIT_CURRICULUM + " — Week 39, 'Ananias and Sapphira,' the lesson that inspired this reading",
+    CIT_SLIDES,
     "An in-depth reading written by Dn Yonnas in the faith of the Ethiopian Orthodox Tewahedo Church",
     "Doctrinal questions, and any question about the souls of Ananias and Sapphira, should be brought to your father confessor or parish priest"],
   related=["book-of-acts","penance","holy-trinity"]),
@@ -1215,8 +1218,8 @@ verses_json = json.dumps([{"t": v, "r": r} for v, r in VERSES_ROTATOR])
 tw = BY_SLUG["ananias-and-sapphira"]  # this week's featured reading
 index_body = f"""
 <div class="announce" role="note">
-  <span class="announce-label">&#9888; Announcement</span>
-  <p><strong>Dn Yonnas will be out of town this week.</strong> Class will be led by <strong>Dn Sirak</strong> — please join his class as usual at the regular time. In the meantime, this week's lesson below is an in-depth reading I prepared for you to study and pray through on your own and with your family.</p>
+  <span class="announce-label">&#10016; Announcement</span>
+  <p><strong>Dn Yonnas is back this week</strong> and will teach this week's lesson, <em>Ananias and Sapphira</em>, in class at the regular time. A heartfelt thank you to <strong>Dn Sirak</strong> for leading the class last week. The full lesson is below — you can download the slides, or read along with the in-depth reading.</p>
 </div>
 <div class="this-week" style="--accent:{theme(tw)['color']}">
   <span class="tw-label">&#10016; This Week's Lesson</span>
