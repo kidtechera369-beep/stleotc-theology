@@ -1225,7 +1225,7 @@ index_body = f"""
   <span class="tw-label">&#10016; This Week's Lesson</span>
   <h2><a href="lessons/{tw['slug']}.html">{html.escape(tw['title'])}</a></h2>
   <p>{html.escape(tw['summary'][:260])}&hellip;</p>
-  <p style="margin-bottom:0;"><a class="btn" href="lessons/{tw['slug']}.html">Read this week's lesson &rarr;</a></p>
+  <p style="margin-bottom:0;"><a class="btn" href="lessons/{tw['slug']}.html">Read this week's lesson &rarr;</a>{f' <a class="btn secondary" href="downloads/{tw["file"]}" download>&#11015; Download Slides</a>' if tw.get('file') else ''}</p>
 </div>
 <div class="hero">
   <h2>Welcome to Our Digital Classroom</h2>
