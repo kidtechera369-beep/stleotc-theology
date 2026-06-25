@@ -1,0 +1,50 @@
+{
+  "id": "patience",
+  "reading": [
+    {"h2": "Patience"},
+    {"p": "Patience is one of the great virtues of the Christian life. Scripture calls us not only to wait, but to wait with courage and trust in God."},
+    {"quote": "Wait patiently for the Lord. Be brave and courageous. Yes, wait patiently for the Lord.", "cite": "Psalms 27:14"},
+    {"h2": "Things Take Time"},
+    {"p": "As the saying goes, \"Rome was not built in a day.\" Nothing ever happens overnight — at least nothing good. Change takes time, and patience is a necessary part of change."},
+    {"h2": "Examples of Patience"},
+    {"p": "Throughout Scripture, God's faithful servants showed great patience as they waited for His promises to be fulfilled."},
+    {"list": [
+      "Moses – waited in the wilderness for 40 years.",
+      "Abraham – had Isaac when he was 100 years old.",
+      "Noah – waited 150 days for the water to begin receding."
+    ]},
+    {"h2": "Why Not Be Impatient?"},
+    {"p": "Patience is one of life's greatest teachers. Seen rightly, patience is a testing period of time in which you are developing into the person you need to be in order to attain the things that you want, and what God has planned for you."},
+    {"h2": "The Lord's Timing"},
+    {"p": "We can trust God's promises even when they seem slow, because His sense of time is not like ours. What seems like delay is actually His patience, giving room for repentance."},
+    {"quote": "But, beloved, be not ignorant of this one thing, that one day is with the Lord as a thousand years, and a thousand years as one day. The Lord is not slack concerning his promise, as some men count slackness; but is longsuffering to us-ward, not willing that any should perish, but that all should come to repentance.", "cite": "2 Peter 3:8-10"}
+  ],
+  "studyGuide": {
+    "overview": "This short lesson teaches patience as a Christian virtue and a necessary part of growth and change. Drawing on Psalms, the examples of Moses, Abraham, and Noah, and 2 Peter, it reframes waiting as a testing period in which God shapes us into who we need to be.",
+    "keyPoints": [
+      "Scripture calls us to wait patiently for the Lord with courage (Psalm 27:14).",
+      "Good things take time; patience is a necessary part of change.",
+      "Moses, Abraham, and Noah are biblical examples of patient waiting.",
+      "Patience is a testing period in which God develops us into who we need to be.",
+      "God's timing differs from ours; His apparent 'slackness' is longsuffering, not wanting any to perish (2 Peter 3:8-10)."
+    ],
+    "reviewQuestions": [
+      "What does Psalm 27:14 teach us about how to wait for the Lord?",
+      "Why does the lesson say that patience is necessary for change?",
+      "Give the three biblical examples of patience and what each one waited for.",
+      "How does the lesson redefine patience as a testing period?",
+      "According to 2 Peter 3:8-10, why is the Lord 'not slack' concerning His promise?"
+    ]
+  },
+  "validity": {
+    "status": "sound",
+    "perspective": "Oriental Orthodox (Ethiopian Tewahedo)",
+    "checks": [
+      "Teaching on patience is moral/devotional and consistent with Orthodox spirituality",
+      "Scripture (Psalm 27:14, 2 Peter 3:8-10) used as given in the slides",
+      "Biblical examples (Moses, Abraham, Noah) presented faithfully",
+      "No doctrinal claims about the Trinity, Christology, or councils that could conflict with Tewahedo teaching"
+    ],
+    "issues": []
+  }
+}
