@@ -8,6 +8,9 @@ service cloud.firestore {
         "kidtechera369@gmail.com"
       ];
     }
+    function isOwner() {
+      return signedIn() && resource.data.authorId == request.auth.uid;
+    }
 
     match /threads/{thread} {
       allow read: if true;
@@ -16,19 +19,39 @@ service cloud.firestore {
         && request.resource.data.title is string
         && request.resource.data.title.size() <= 140
         && request.resource.data.body is string
-        && request.resource.data.body.size() <= 5000;
-      // anyone signed in may only bump the reply counter
+        && request.resource.data.body.size() <= 5000
+        && request.resource.data.category is string
+        && request.resource.data.category.size() <= 24
+        && request.resource.data.anon is bool;
+
+      // Anyone signed in may bump the reply counter / last-reply time.
       allow update: if signedIn()
-        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['replyCount']);
-      allow delete: if isAdmin() || (signedIn() && resource.data.authorId == request.auth.uid);
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['replyCount', 'lastReplyAt']);
+      // Only the thread owner or a moderator may set the "best answer".
+      allow update: if (isAdmin() || isOwner())
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['bestReplyId']);
+
+      allow delete: if isAdmin() || isOwner();
 
       match /replies/{reply} {
         allow read: if true;
         allow create: if signedIn()
           && request.resource.data.authorId == request.auth.uid
           && request.resource.data.body is string
-          && request.resource.data.body.size() <= 5000;
-        allow delete: if isAdmin() || (signedIn() && resource.data.authorId == request.auth.uid);
+          && request.resource.data.body.size() <= 5000
+          && request.resource.data.anon is bool;
+        allow delete: if isAdmin() || isOwner();
+      }
+
+      // One reaction document per user per target (doc id is "<uid>__<targetId>").
+      match /reactions/{reaction} {
+        allow read: if true;
+        allow create, update: if signedIn()
+          && request.resource.data.uid == request.auth.uid
+          && request.resource.data.type is string
+          && request.resource.data.type.size() <= 16
+          && request.resource.data.targetId is string;
+        allow delete: if signedIn() && resource.data.uid == request.auth.uid;
       }
     }
   }

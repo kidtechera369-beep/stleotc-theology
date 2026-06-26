@@ -3,6 +3,9 @@
    Loaded as <script type="module"> on community.html.
    Reads window.FIREBASE_CONFIG (assets/js/firebase-config.js).
    Degrades gracefully to a setup notice when not configured.
+
+   Features: categories, search + sort, reactions, best-answer, and an
+   anonymous posting option (name is never written to public docs when anon).
    ========================================================================== */
 
 const VERSION = "10.12.2";
@@ -13,6 +16,29 @@ const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
 const cfg = window.FIREBASE_CONFIG || {};
 const ADMINS = (window.ADMIN_EMAILS || []).map((e) => String(e).toLowerCase());
 const configured = cfg.apiKey && cfg.apiKey !== "REPLACE_ME" && cfg.projectId && cfg.projectId !== "REPLACE_ME";
+
+/* Sections members can post in. The "anon" section forces anonymous posting. */
+const CATEGORIES = [
+  { id: "general",   label: "General",         emoji: "💬" },
+  { id: "scripture", label: "Scripture",       emoji: "📖" },
+  { id: "prayer",    label: "Prayer Requests", emoji: "🕯️" },
+  { id: "feasts",    label: "Feasts & Fasts",  emoji: "✝️" },
+  { id: "lessons",   label: "Lessons",         emoji: "🎓" },
+  { id: "youth",     label: "Youth",           emoji: "🌱" },
+  { id: "anon",      label: "Anonymous",       emoji: "🕊️", forcesAnon: true },
+];
+const CAT_BY_ID = Object.fromEntries(CATEGORIES.map((c) => [c.id, c]));
+const catLabel = (id) => CAT_BY_ID[id] ? `${CAT_BY_ID[id].emoji} ${CAT_BY_ID[id].label}` : "💬 General";
+
+/* Reaction palette. `key` is what's stored; `title` is the hover label. */
+const REACTIONS = [
+  { key: "pray",  emoji: "🙏", title: "Amen" },
+  { key: "cross", emoji: "✝️", title: "Glory to God" },
+  { key: "candle",emoji: "🕯️", title: "Praying for you" },
+  { key: "heart", emoji: "❤️", title: "Love" },
+  { key: "up",    emoji: "👍", title: "Agree" },
+];
+const REACTION_BY_KEY = Object.fromEntries(REACTIONS.map((r) => [r.key, r]));
 
 if (!root) {
   /* not on the community page */
@@ -62,7 +88,8 @@ async function boot() {
   const authClient = A.getAuth(app);
   const db = F.getFirestore(app);
 
-  const state = { user: null, unsub: null };
+  const state = { user: null, unsub: null, threads: [] };
+  const ui = { category: "all", q: "", sort: "new" };   // list filters (persist across navigation)
   const isAdmin = () => state.user && ADMINS.includes((state.user.email || "").toLowerCase());
   const threadId = () => new URLSearchParams(location.search).get("thread");
 
@@ -157,58 +184,134 @@ async function boot() {
   /* ---- thread list ---- */
   function showList() {
     const mount = document.getElementById("forumMount");
+    const displayName = () => state.user.displayName || state.user.email;
+
     mount.innerHTML = `
       ${state.user ? `
       <form id="newThread" class="card thread-form">
         <h3>Ask a question or start a discussion</h3>
         <input type="text" id="ntTitle" placeholder="Title — e.g. How do we keep the Fast of Nineveh?" maxlength="140" required>
         <textarea id="ntBody" placeholder="Share your question or thought…" rows="4" required></textarea>
-        <div><button class="btn btn-primary btn-sm" type="submit">Post</button></div>
+        <div class="nt-row">
+          <label class="nt-field">Section
+            <select id="ntCat">${CATEGORIES.map((c) => `<option value="${c.id}">${c.emoji} ${esc(c.label)}</option>`).join("")}</select>
+          </label>
+          <label class="nt-anon"><input type="checkbox" id="ntAnon"> Post anonymously</label>
+          <button class="btn btn-primary btn-sm" type="submit">Post</button>
+        </div>
       </form>` : `<div class="notice notice-soft">Please sign in above to post a question. You can still read every discussion.</div>`}
+
+      <div class="forum-toolbar">
+        <input type="search" id="forumSearch" class="forum-search" placeholder="Search discussions…" value="${esc(ui.q)}">
+        <label class="forum-sort">Sort
+          <select id="forumSort">
+            <option value="new">Newest</option>
+            <option value="replies">Most replies</option>
+            <option value="unanswered">Unanswered</option>
+          </select>
+        </label>
+      </div>
+      <div class="cat-chips" id="catChips">
+        <button class="chip" data-cat="all">All</button>
+        ${CATEGORIES.map((c) => `<button class="chip" data-cat="${c.id}">${c.emoji} ${esc(c.label)}</button>`).join("")}
+      </div>
+
       <div id="threadList" class="thread-list"><p class="muted">Loading discussions…</p></div>`;
 
     if (state.user) {
+      const anonBox = document.getElementById("ntAnon");
+      const catSel = document.getElementById("ntCat");
+      // Selecting the Anonymous section forces & locks the anonymous checkbox.
+      const syncAnonLock = () => {
+        const forced = CAT_BY_ID[catSel.value] && CAT_BY_ID[catSel.value].forcesAnon;
+        if (forced) { anonBox.checked = true; anonBox.disabled = true; }
+        else { anonBox.disabled = false; }
+      };
+      catSel.onchange = syncAnonLock; syncAnonLock();
+
       document.getElementById("newThread").onsubmit = async (e) => {
         e.preventDefault();
         const title = document.getElementById("ntTitle").value.trim();
         const body = document.getElementById("ntBody").value.trim();
         if (!title || !body) return;
+        const category = catSel.value;
+        const anon = anonBox.checked || (CAT_BY_ID[category] && CAT_BY_ID[category].forcesAnon) || false;
         try {
           const ref = await F.addDoc(F.collection(db, "threads"), {
-            title, body,
-            authorName: state.user.displayName || state.user.email,
+            title, body, category, anon,
+            // Anonymous posts never store the real name — only the uid, which
+            // only a moderator can map back via the Firebase console.
+            authorName: anon ? "Anonymous" : displayName(),
             authorId: state.user.uid,
             createdAt: F.serverTimestamp(),
+            lastReplyAt: F.serverTimestamp(),
             replyCount: 0,
+            bestReplyId: null,
           });
           go(`community.html?thread=${ref.id}`);
         } catch (ex) { alert(ex.message); }
       };
     }
 
+    // toolbar + chips wiring (re-render from cached snapshot, no refetch)
+    const search = document.getElementById("forumSearch");
+    const sortSel = document.getElementById("forumSort");
+    sortSel.value = ui.sort;
+    search.oninput = () => { ui.q = search.value; renderThreads(); };
+    sortSel.onchange = () => { ui.sort = sortSel.value; renderThreads(); };
+    document.querySelectorAll("#catChips .chip").forEach((b) => b.onclick = () => {
+      ui.category = b.dataset.cat; syncChips(); renderThreads();
+    });
+    syncChips();
+
     const q = F.query(F.collection(db, "threads"), F.orderBy("createdAt", "desc"));
     state.unsub = F.onSnapshot(q, (snap) => {
-      const list = document.getElementById("threadList");
-      if (!list) return;
-      if (snap.empty) { list.innerHTML = `<div class="empty-state"><h3>No discussions yet</h3><p>Be the first to ask a question.</p></div>`; return; }
-      list.innerHTML = snap.docs.map((d) => {
-        const t = d.data();
-        return `<a class="thread-row" href="community.html?thread=${d.id}" data-id="${d.id}">
-          <div class="tr-main">
-            <h3>${esc(t.title)}</h3>
-            <p>${esc(snippet(t.body))}</p>
-            <span class="tr-meta">${esc(t.authorName || "Member")} · ${timeAgo(t.createdAt)}</span>
-          </div>
-          <div class="tr-count"><strong>${t.replyCount || 0}</strong><span>repl${(t.replyCount || 0) === 1 ? "y" : "ies"}</span></div>
-        </a>`;
-      }).join("");
-      list.querySelectorAll(".thread-row").forEach((a) => a.addEventListener("click", (e) => {
-        e.preventDefault(); go(a.getAttribute("href"));
-      }));
+      state.threads = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+      renderThreads();
     }, (err) => {
       const list = document.getElementById("threadList");
       if (list) list.innerHTML = `<div class="notice notice-warn"><p>${esc(err.message)}</p><p class="muted">Make sure Firestore security rules are published (see COMMUNITY-SETUP.md).</p></div>`;
     });
+
+    function syncChips() {
+      document.querySelectorAll("#catChips .chip").forEach((b) =>
+        b.classList.toggle("active", b.dataset.cat === ui.category));
+    }
+
+    function renderThreads() {
+      const list = document.getElementById("threadList");
+      if (!list) return;
+      let items = state.threads.slice();
+      if (ui.category !== "all") items = items.filter((t) => (t.category || "general") === ui.category);
+      const term = ui.q.trim().toLowerCase();
+      if (term) items = items.filter((t) =>
+        (t.title || "").toLowerCase().includes(term) || (t.body || "").toLowerCase().includes(term));
+      if (ui.sort === "replies") items.sort((a, b) => (b.replyCount || 0) - (a.replyCount || 0));
+      else if (ui.sort === "unanswered") items = items.filter((t) => !(t.replyCount > 0));
+
+      if (!items.length) {
+        list.innerHTML = state.threads.length
+          ? `<div class="empty-state"><h3>No matching discussions</h3><p>Try a different section or search.</p></div>`
+          : `<div class="empty-state"><h3>No discussions yet</h3><p>Be the first to ask a question.</p></div>`;
+        return;
+      }
+      list.innerHTML = items.map((t) => `
+        <a class="thread-row" href="community.html?thread=${t.id}" data-id="${t.id}">
+          <div class="tr-main">
+            <div class="tr-badges">
+              <span class="pill maroon cat-pill">${catLabel(t.category)}</span>
+              ${t.bestReplyId ? `<span class="pill green">✓ Answered</span>` : ""}
+            </div>
+            <h3>${esc(t.title)}</h3>
+            <p>${esc(snippet(t.body))}</p>
+            <span class="tr-meta">${esc(authorLabel(t))} · ${timeAgo(t.createdAt)}</span>
+          </div>
+          <div class="tr-count"><strong>${t.replyCount || 0}</strong><span>repl${(t.replyCount || 0) === 1 ? "y" : "ies"}</span></div>
+        </a>`).join("");
+      list.querySelectorAll(".thread-row").forEach((a) => a.addEventListener("click", (e) => {
+        e.preventDefault(); go(a.getAttribute("href"));
+      }));
+    }
   }
 
   /* ---- thread detail ---- */
@@ -219,77 +322,188 @@ async function boot() {
     document.getElementById("backLink").onclick = (e) => { e.preventDefault(); go("community.html"); };
 
     const tref = F.doc(db, "threads", id);
-    state.unsub = F.onSnapshot(tref, (d) => {
+    // Local cache of the three live data sources; any update re-renders the view.
+    const data = { thread: null, threadExists: false, replies: [], reactions: new Map() };
+
+    const unsubT = F.onSnapshot(tref, (d) => {
+      data.threadExists = d.exists();
+      data.thread = d.exists() ? d.data() : null;
+      renderDetail();
+    });
+    const rq = F.query(F.collection(db, "threads", id, "replies"), F.orderBy("createdAt", "asc"));
+    const unsubR = F.onSnapshot(rq, (snap) => {
+      data.replies = snap.docs.map((r) => ({ id: r.id, ...r.data() }));
+      renderDetail();
+    });
+    const xq = F.collection(db, "threads", id, "reactions");
+    const unsubX = F.onSnapshot(xq, (snap) => {
+      // targetId -> { key -> Set(uid) }
+      const map = new Map();
+      snap.docs.forEach((doc) => {
+        const r = doc.data();
+        if (!r || !r.targetId || !r.type) return;
+        if (!map.has(r.targetId)) map.set(r.targetId, {});
+        const bucket = map.get(r.targetId);
+        (bucket[r.type] = bucket[r.type] || new Set()).add(r.uid);
+      });
+      data.reactions = map;
+      renderDetail();
+    });
+
+    state.unsub = () => { unsubT(); unsubR(); unsubX(); };
+
+    /* render the OP + replies + reaction bars from the cached `data` */
+    function renderDetail() {
       const detail = document.getElementById("threadDetail");
       if (!detail) return;
-      if (!d.exists()) { detail.innerHTML = `<div class="empty-state"><h3>Discussion not found</h3><p>It may have been removed.</p></div>`; return; }
-      const t = d.data();
-      const canDel = isAdmin() || (state.user && state.user.uid === t.authorId);
+      if (!data.threadExists) {
+        detail.innerHTML = `<div class="empty-state"><h3>Discussion not found</h3><p>It may have been removed.</p></div>`;
+        return;
+      }
+      const t = data.thread;
+      const canManage = isAdmin() || (state.user && state.user.uid === t.authorId); // thread owner / mod
+      const canDelOp = canManage;
+
+      // best answer floats to the top of the reply list
+      const replies = data.replies.slice().sort((a, b) => {
+        if (a.id === t.bestReplyId) return -1;
+        if (b.id === t.bestReplyId) return 1;
+        return 0;
+      });
+
       detail.innerHTML = `
         <article class="thread-op card">
+          <div class="tr-badges">
+            <span class="pill maroon cat-pill">${catLabel(t.category)}</span>
+            ${t.bestReplyId ? `<span class="pill green">✓ Answered</span>` : ""}
+          </div>
           <h2>${esc(t.title)}</h2>
-          <p class="op-meta">${esc(t.authorName || "Member")} · ${timeAgo(t.createdAt)}</p>
+          <p class="op-meta">${esc(authorLabel(t))} · ${timeAgo(t.createdAt)}</p>
           <div class="op-body">${paras(t.body)}</div>
-          ${canDel ? `<div class="op-actions"><button class="btn btn-ghost btn-sm" id="delThread">Delete</button></div>` : ""}
+          ${reactionBar(id)}
+          ${canDelOp ? `<div class="op-actions"><button class="btn btn-ghost btn-sm" id="delThread">Delete discussion</button></div>` : ""}
         </article>
+
         <h3 class="replies-h">Replies</h3>
-        <div id="replyList" class="reply-list"><p class="muted">Loading replies…</p></div>
+        <div class="reply-list">
+          ${replies.length ? replies.map((x) => {
+            const best = x.id === t.bestReplyId;
+            const canDelReply = isAdmin() || (state.user && state.user.uid === x.authorId);
+            return `<div class="reply${best ? " reply-best" : ""}" data-rid="${x.id}">
+              ${best ? `<div class="best-flag">✓ Best answer</div>` : ""}
+              <div class="reply-meta">${esc(authorLabel(x))} · ${timeAgo(x.createdAt)}</div>
+              <div class="reply-body">${paras(x.body)}</div>
+              ${reactionBar(x.id)}
+              <div class="reply-actions">
+                ${canManage ? `<button class="linkbtn mark-best" data-rid="${x.id}">${best ? "Unmark answer" : "Mark as answer"}</button>` : ""}
+                ${canDelReply ? `<button class="linkbtn reply-del" data-rid="${x.id}">Delete</button>` : ""}
+              </div>
+            </div>`;
+          }).join("") : `<p class="muted">No replies yet. Be the first to respond.</p>`}
+        </div>
+
         ${state.user ? `
         <form id="replyForm" class="card thread-form">
           <textarea id="rfBody" placeholder="Write a reply…" rows="3" required></textarea>
-          <div><button class="btn btn-primary btn-sm" type="submit">Reply</button></div>
+          <div class="nt-row">
+            ${t.anon ? `<span class="muted nt-anon-note">Replies in this discussion are posted anonymously.</span>`
+                     : `<label class="nt-anon"><input type="checkbox" id="rfAnon"> Reply anonymously</label>`}
+            <button class="btn btn-primary btn-sm" type="submit">Reply</button>
+          </div>
         </form>` : `<div class="notice notice-soft">Sign in above to reply.</div>`}`;
 
-      if (canDel) document.getElementById("delThread").onclick = async () => {
+      wireDetail(t);
+    }
+
+    function wireDetail(t) {
+      const detail = document.getElementById("threadDetail");
+      const displayName = () => state.user.displayName || state.user.email;
+
+      const delBtn = document.getElementById("delThread");
+      if (delBtn) delBtn.onclick = async () => {
         if (!confirm("Delete this discussion and its replies?")) return;
         try { await F.deleteDoc(tref); go("community.html"); } catch (ex) { alert(ex.message); }
       };
-      if (state.user) document.getElementById("replyForm").onsubmit = async (e) => {
-        e.preventDefault();
-        const body = document.getElementById("rfBody").value.trim();
-        if (!body) return;
-        try {
-          await F.addDoc(F.collection(db, "threads", id, "replies"), {
-            body,
-            authorName: state.user.displayName || state.user.email,
-            authorId: state.user.uid,
-            createdAt: F.serverTimestamp(),
-          });
-          await F.updateDoc(tref, { replyCount: F.increment(1) });
-          document.getElementById("rfBody").value = "";
-        } catch (ex) { alert(ex.message); }
-      };
-    });
 
-    // replies realtime
-    const rq = F.query(F.collection(db, "threads", id, "replies"), F.orderBy("createdAt", "asc"));
-    const unsubR = F.onSnapshot(rq, (snap) => {
-      const rl = document.getElementById("replyList");
-      if (!rl) return;
-      if (snap.empty) { rl.innerHTML = `<p class="muted">No replies yet. Be the first to respond.</p>`; return; }
-      rl.innerHTML = snap.docs.map((r) => {
-        const x = r.data();
-        const canDel = isAdmin() || (state.user && state.user.uid === x.authorId);
-        return `<div class="reply">
-          <div class="reply-meta">${esc(x.authorName || "Member")} · ${timeAgo(x.createdAt)}</div>
-          <div class="reply-body">${paras(x.body)}</div>
-          ${canDel ? `<button class="reply-del" data-rid="${r.id}">Delete</button>` : ""}
-        </div>`;
-      }).join("");
-      rl.querySelectorAll(".reply-del").forEach((b) => b.onclick = async () => {
+      detail.querySelectorAll(".mark-best").forEach((b) => b.onclick = async () => {
+        const rid = b.dataset.rid;
+        const next = t.bestReplyId === rid ? null : rid;
+        try { await F.updateDoc(tref, { bestReplyId: next }); } catch (ex) { alert(ex.message); }
+      });
+
+      detail.querySelectorAll(".reply-del").forEach((b) => b.onclick = async () => {
         if (!confirm("Delete this reply?")) return;
         try {
+          if (t.bestReplyId === b.dataset.rid) await F.updateDoc(tref, { bestReplyId: null });
           await F.deleteDoc(F.doc(db, "threads", id, "replies", b.dataset.rid));
           await F.updateDoc(tref, { replyCount: F.increment(-1) });
         } catch (ex) { alert(ex.message); }
       });
-    });
-    // chain unsub
-    const prev = state.unsub;
-    state.unsub = () => { if (prev) prev(); unsubR(); };
+
+      // reactions (event-delegated)
+      detail.querySelectorAll(".react-btn").forEach((b) => b.onclick = () => toggleReaction(b.dataset.target, b.dataset.key));
+
+      const form = document.getElementById("replyForm");
+      if (form) form.onsubmit = async (e) => {
+        e.preventDefault();
+        const body = document.getElementById("rfBody").value.trim();
+        if (!body) return;
+        const anonInput = document.getElementById("rfAnon");
+        const anon = t.anon || (anonInput && anonInput.checked) || false;
+        try {
+          await F.addDoc(F.collection(db, "threads", id, "replies"), {
+            body, anon,
+            authorName: anon ? "Anonymous" : displayName(),
+            authorId: state.user.uid,
+            createdAt: F.serverTimestamp(),
+          });
+          await F.updateDoc(tref, { replyCount: F.increment(1), lastReplyAt: F.serverTimestamp() });
+          document.getElementById("rfBody").value = "";
+        } catch (ex) { alert(ex.message); }
+      };
+    }
+
+    /* a row of reaction buttons for a given target (thread id or reply id) */
+    function reactionBar(targetId) {
+      const bucket = data.reactions.get(targetId) || {};
+      const mine = state.user ? myReaction(targetId) : null;
+      const btns = REACTIONS.map((r) => {
+        const count = bucket[r.key] ? bucket[r.key].size : 0;
+        const active = mine === r.key;
+        return `<button class="react-btn${active ? " active" : ""}${count ? " has" : ""}" data-target="${targetId}" data-key="${r.key}" title="${esc(r.title)}"${state.user ? "" : " disabled"}>
+          <span class="re-emoji">${r.emoji}</span>${count ? `<span class="re-count">${count}</span>` : ""}
+        </button>`;
+      }).join("");
+      return `<div class="react-bar">${btns}</div>`;
+    }
+
+    function myReaction(targetId) {
+      const bucket = data.reactions.get(targetId);
+      if (!bucket || !state.user) return null;
+      for (const key of Object.keys(bucket)) if (bucket[key].has(state.user.uid)) return key;
+      return null;
+    }
+
+    async function toggleReaction(targetId, key) {
+      if (!state.user) return;
+      const docId = `${state.user.uid}__${targetId}`;
+      const ref = F.doc(db, "threads", id, "reactions", docId);
+      const current = myReaction(targetId);
+      try {
+        if (current === key) {
+          await F.deleteDoc(ref);                       // tap same emoji again → remove
+        } else {
+          await F.setDoc(ref, { uid: state.user.uid, targetId, type: key, createdAt: F.serverTimestamp() });
+        }
+      } catch (ex) { alert(ex.message); }
+    }
   }
 
   /* ---- helpers ---- */
+  function authorLabel(o) {
+    if (o && o.anon) return "🕊️ Anonymous";
+    return (o && o.authorName) || "Member";
+  }
   function snippet(s) { s = (s || "").replace(/\s+/g, " ").trim(); return s.length > 140 ? s.slice(0, 140) + "…" : s; }
   function paras(s) { return (s || "").split(/\n{2,}/).map((p) => `<p>${esc(p).replace(/\n/g, "<br>")}</p>`).join(""); }
   function timeAgo(ts) {

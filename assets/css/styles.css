@@ -445,6 +445,58 @@ table.curriculum td .wk { font-family: var(--serif); font-weight: 700; color: va
 .steps-plain { padding-left: 1.3rem; display: grid; gap: .45rem; color: var(--ink-soft); }
 .steps-plain code, .notice code { background: var(--parchment); padding: .1em .4em; border-radius: 5px; font-size: .9em; }
 
+/* Community: categories, search, reactions, best-answer, anon -------------- */
+.tr-badges { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .45rem; }
+.cat-pill { font-size: .72rem; }
+
+/* composer extras */
+.nt-row { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; }
+.nt-field { display: flex; align-items: center; gap: .4rem; font-size: .85rem; color: var(--ink-soft); }
+.nt-field select, .forum-sort select {
+  font-family: var(--sans); font-size: .9rem; padding: .45em .7em; border-radius: var(--radius-sm);
+  border: 1.5px solid var(--line); background: var(--white); color: var(--ink); cursor: pointer;
+}
+.nt-anon { display: flex; align-items: center; gap: .4rem; font-size: .85rem; color: var(--ink-soft); cursor: pointer; }
+.nt-anon input { accent-color: var(--maroon); }
+.nt-anon-note { font-size: .82rem; }
+.nt-row .btn { margin-left: auto; }
+
+/* toolbar: search + sort */
+.forum-toolbar { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; margin-bottom: .8rem; }
+.forum-search {
+  flex: 1; min-width: 200px; font-family: var(--sans); font-size: 1rem; padding: .6em .9em;
+  border-radius: var(--radius-sm); border: 1.5px solid var(--line); background: var(--white); color: var(--ink);
+}
+.forum-search:focus { outline: none; border-color: var(--maroon); }
+.forum-sort { display: flex; align-items: center; gap: .4rem; font-size: .85rem; color: var(--ink-soft); }
+
+/* category filter chips */
+.cat-chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.4rem; }
+
+/* reactions */
+.react-bar { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .8rem; }
+.react-btn {
+  display: inline-flex; align-items: center; gap: .3rem; padding: .25em .6em;
+  border: 1.5px solid var(--line); border-radius: 999px; background: var(--white);
+  font-size: .9rem; cursor: pointer; transition: border-color .15s, background .15s, transform .15s;
+}
+.react-btn:hover:not(:disabled) { border-color: var(--gold); transform: translateY(-1px); }
+.react-btn.has { border-color: var(--gold-soft); }
+.react-btn.active { background: color-mix(in srgb, var(--maroon) 12%, transparent); border-color: var(--maroon); }
+.react-btn:disabled { cursor: default; opacity: .7; }
+.react-btn .re-count { font-size: .8rem; font-weight: 600; color: var(--ink-soft); }
+.react-btn.active .re-count { color: var(--maroon); }
+
+/* best answer */
+.reply-best { border-left-color: var(--green); background: color-mix(in srgb, var(--green) 6%, var(--white)); }
+.best-flag { font-size: .76rem; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: .04em; margin-bottom: .35rem; }
+
+/* reply action row (replaces the old absolutely-positioned delete link) */
+.reply-actions { display: flex; gap: 1rem; margin-top: .7rem; }
+.linkbtn { font-size: .78rem; color: var(--maroon); background: none; border: 0; cursor: pointer; padding: 0; }
+.linkbtn:hover { text-decoration: underline; }
+.reply-del { position: static; top: auto; right: auto; }
+
 /* Callout / verse ---------------------------------------------------------- */
 .callout {
   background: linear-gradient(160deg, var(--maroon), var(--maroon-dark)); color: var(--gold-soft);

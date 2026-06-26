@@ -57,6 +57,9 @@ service cloud.firestore {
         "kidtechera369@gmail.com"   // <-- the deacon's email(s); match ADMIN_EMAILS
       ];
     }
+    function isOwner() {
+      return signedIn() && resource.data.authorId == request.auth.uid;
+    }
 
     match /threads/{thread} {
       allow read: if true;
@@ -65,24 +68,48 @@ service cloud.firestore {
         && request.resource.data.title is string
         && request.resource.data.title.size() <= 140
         && request.resource.data.body is string
-        && request.resource.data.body.size() <= 5000;
-      // anyone signed in may only bump the reply counter
+        && request.resource.data.body.size() <= 5000
+        && request.resource.data.category is string
+        && request.resource.data.category.size() <= 24
+        && request.resource.data.anon is bool;
+
+      // Anyone signed in may bump the reply counter / last-reply time.
       allow update: if signedIn()
-        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['replyCount']);
-      allow delete: if isAdmin() || (signedIn() && resource.data.authorId == request.auth.uid);
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['replyCount', 'lastReplyAt']);
+      // Only the thread owner or a moderator may set the "best answer".
+      allow update: if (isAdmin() || isOwner())
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['bestReplyId']);
+
+      allow delete: if isAdmin() || isOwner();
 
       match /replies/{reply} {
         allow read: if true;
         allow create: if signedIn()
           && request.resource.data.authorId == request.auth.uid
           && request.resource.data.body is string
-          && request.resource.data.body.size() <= 5000;
-        allow delete: if isAdmin() || (signedIn() && resource.data.authorId == request.auth.uid);
+          && request.resource.data.body.size() <= 5000
+          && request.resource.data.anon is bool;
+        allow delete: if isAdmin() || isOwner();
+      }
+
+      // One reaction document per user per target (doc id is "<uid>__<targetId>").
+      match /reactions/{reaction} {
+        allow read: if true;
+        allow create, update: if signedIn()
+          && request.resource.data.uid == request.auth.uid
+          && request.resource.data.type is string
+          && request.resource.data.type.size() <= 16
+          && request.resource.data.targetId is string;
+        allow delete: if signedIn() && resource.data.uid == request.auth.uid;
       }
     }
   }
 }
 ```
+
+> **After updating these rules, you must re-publish them** in the Firebase console
+> (**Firestore Database → Rules → Publish**), or the new features (reactions,
+> best-answer, categories, anonymous posting) will be blocked.
 
 ## 6. Set the moderator email(s)
 - In [`assets/js/firebase-config.js`](assets/js/firebase-config.js), uncomment and set
@@ -101,6 +128,15 @@ service cloud.firestore {
 ## What members can do
 - **Read** every discussion without signing in.
 - **Post** a question and **reply** after signing in (Google or email).
+- **Choose a section** (General, Scripture, Prayer Requests, Feasts & Fasts,
+  Lessons, Youth, Anonymous) and **filter / search / sort** the discussion list.
+- **React** to a post or reply (🙏 ✝️ 🕯️ ❤️ 👍) — one reaction per person.
+- **Mark a best answer** — the asker or a moderator can flag the reply that
+  resolved a question; it floats to the top with an "Answered" badge.
+- **Post anonymously** — a checkbox on any post (always on in the Anonymous
+  section). Anonymous posts show "Anonymous" to other members; the real name is
+  **never written** to the public document, so only a moderator can identify the
+  author via the Firebase console (Authentication → look up the uid).
 - **Delete** their own posts; moderators can delete anything.
 
 ## Cost
