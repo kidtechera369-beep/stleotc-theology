@@ -127,10 +127,10 @@ section { padding-block: clamp(48px, 7vw, 90px); }
 .brand .brand-sub { font-family: var(--sans); font-size: .7rem; letter-spacing: .08em;
   text-transform: uppercase; color: var(--gold-deep); }
 
-.nav-links { display: flex; align-items: center; gap: .25rem; list-style: none; }
+.nav-links { display: flex; align-items: center; gap: .1rem; list-style: none; }
 .nav-links a {
-  font-family: var(--sans); font-size: .92rem; font-weight: 500; color: var(--ink-soft);
-  padding: .5em .8em; border-radius: 8px; transition: background .15s, color .15s;
+  font-family: var(--sans); font-size: .9rem; font-weight: 500; color: var(--ink-soft);
+  padding: .45em .6em; border-radius: 8px; white-space: nowrap; transition: background .15s, color .15s;
 }
 .nav-links a:hover { background: var(--parchment); color: var(--maroon); text-decoration: none; }
 .nav-links a.active { color: var(--maroon); font-weight: 700; }
@@ -168,10 +168,10 @@ section { padding-block: clamp(48px, 7vw, 90px); }
 /* Page header (interior pages) -------------------------------------------- */
 .page-head {
   background: linear-gradient(180deg, var(--parchment), var(--cream));
-  border-bottom: 1px solid var(--line); padding-block: clamp(40px, 6vw, 72px);
+  border-bottom: 1px solid var(--line); padding-block: clamp(22px, 3.2vw, 40px);
 }
 .page-head h1 { color: var(--maroon-dark); }
-.page-head p { max-width: 65ch; margin-top: .7rem; font-size: 1.08rem; }
+.page-head p { max-width: 65ch; margin-top: .5rem; font-size: 1rem; }
 .breadcrumb { font-size: .85rem; color: var(--ink-soft); margin-bottom: .8rem; }
 .class-note { display: inline-block; margin-top: 1rem; font-size: .9rem; font-weight: 600;
   color: var(--gold-deep); background: var(--parchment); border: 1px solid var(--line);
@@ -508,15 +508,15 @@ table.curriculum td .wk { font-family: var(--serif); font-weight: 700; color: va
 .callout .verse { font-family: var(--serif); font-style: italic; font-size: 1.3rem; color: #fff; }
 
 /* Footer ------------------------------------------------------------------- */
-.site-footer { background: var(--maroon-dark); color: var(--gold-soft); margin-top: auto; padding-block: 3rem 1.5rem; }
+.site-footer { background: var(--maroon-dark); color: var(--gold-soft); margin-top: auto; padding-block: 1.8rem 1.1rem; }
 .site-footer a { color: var(--gold-soft); }
 .site-footer a:hover { color: #fff; }
-.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
-.footer-grid h4 { color: #fff; font-family: var(--sans); font-size: .82rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .9rem; }
-.footer-grid ul { list-style: none; display: grid; gap: .5rem; font-size: .92rem; }
-.footer-brand { font-family: var(--serif); font-size: 1.2rem; color: #fff; margin-bottom: .5rem; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 1.4rem; margin-bottom: 1.3rem; }
+.footer-grid h4 { color: #fff; font-family: var(--sans); font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .55rem; }
+.footer-grid ul { list-style: none; display: grid; gap: .32rem; font-size: .88rem; }
+.footer-brand { font-family: var(--serif); font-size: 1.1rem; color: #fff; margin-bottom: .35rem; }
 .footer-brand .cross { color: var(--gold); }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,.15); padding-top: 1.3rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; font-size: .85rem; color: rgba(255,255,255,.7); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.15); padding-top: .9rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .8rem; font-size: .82rem; color: rgba(255,255,255,.7); }
 
 /* Utilities ---------------------------------------------------------------- */
 .section-head { max-width: 60ch; margin-bottom: 2.2rem; }

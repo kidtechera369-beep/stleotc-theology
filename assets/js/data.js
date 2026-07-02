@@ -2573,6 +2573,157 @@ const LESSONS = [
       }
     ],
     "featured": false
+  },
+  {
+    "id": "ananias-and-sapphira",
+    "title": "Ananias and Sapphira: Truth Before God",
+    "category": "Scripture",
+    "audience": "Youth & Young Adults",
+    "week": 39,
+    "accent": "#1f4d2e",
+    "byline": "By Dn Yonnas — slides and in-depth reading by Dn Yonnas, inspired by the Week 39 curriculum lesson of Kesis Solomon Mulugeta Zewde (PhD)",
+    "summary": "An in-depth reading of Acts 5:1-11 for the Ethiopian Orthodox Tewahedo youth. Why did so severe a judgment fall on Ananias and Sapphira at the very birth of the Church? The reading shows that their sin was not keeping their money but lying to the Holy Spirit — and that Peter's words, \"You have not lied to men but to God,\" are one of Scripture's clearest witnesses that the Holy Spirit is truly God. It calls us to truthfulness, to giving from love rather than show, and to the holy fear of God.",
+    "objectives": [
+      "Tell the story of Ananias and Sapphira accurately from Acts 5",
+      "Explain that their sin was hypocrisy and lying to the Holy Spirit, not the keeping of their property",
+      "Show from Peter's words that the Holy Spirit is truly God",
+      "Learn to love the truth, to give in secret from the heart, and to live in the holy fear of God"
+    ],
+    "verses": [
+      {
+        "ref": "Acts 5:3-4",
+        "text": "\"Why has Satan filled your heart to lie to the Holy Spirit?... You have not lied to men but to God.\""
+      },
+      {
+        "ref": "Acts 5:11",
+        "text": "\"So great fear came upon all the church and upon all who heard these things.\""
+      },
+      {
+        "ref": "Proverbs 9:10",
+        "text": "\"The fear of the Lord is the beginning of wisdom.\""
+      },
+      {
+        "ref": "Matthew 6:3-4",
+        "text": "\"Do not let your left hand know what your right hand is doing... and your Father who sees in secret will reward you openly.\""
+      }
+    ],
+    "confess": [],
+    "reject": [],
+    "teaching": [
+      "The early Church in Jerusalem shared everything in love (koinonia); Ananias and Sapphira broke that trust",
+      "Their property and money were their own — they were not required to sell or to give all (Acts 5:4)",
+      "Their sin was hypocrisy and lying to the Holy Spirit, driven by love of money and love of human praise (vainglory)",
+      "Satan 'filled their heart' because they made room for him; the responsibility remained theirs",
+      "\"You have not lied to men but to God\" shows that the Holy Spirit is truly God — a witness to the Holy Trinity",
+      "God acted visibly at the Church's foundation so that all would learn the holy fear of God",
+      "Scripture leaves their eternal fate to God's mercy; the warning is for us, not a verdict on them",
+      "The Sacrament of Confession is the honest path they refused — we tell the truth and receive life"
+    ],
+    "terms": [
+      {
+        "term": "Koinonia",
+        "def": "Holy communion or fellowship — the shared life of love in the early Church, where believers held all things in common (Acts 4:32)."
+      },
+      {
+        "term": "Hypocrisy",
+        "def": "Wearing a holy mask over an unholy heart; performing devotion outwardly while the inner reality is different. The central sin of Ananias and Sapphira."
+      },
+      {
+        "term": "Vainglory",
+        "def": "The hunger to be seen and praised by people. It drove the lie, as they wanted the honor of total sacrifice without the reality."
+      },
+      {
+        "term": "Holy fear of God",
+        "def": "Reverent awe before the living and holy God — not the terror of a slave, but the beginning of wisdom (Proverbs 9:10)."
+      },
+      {
+        "term": "The Holy Spirit",
+        "def": "The Third Person of the Holy Trinity, true God, 'the Lord, the Giver of Life'; to lie to Him is to lie to God (Acts 5:3-4)."
+      }
+    ],
+    "discussion": [
+      "Peter says the land and money were their own. So what exactly was their sin?",
+      "How do verses 3 and 4 together teach us that the Holy Spirit is God?",
+      "What is the difference between holy fear of God and being simply afraid of God?",
+      "Where are we tempted to 'look more devout than we are'? How does Confession heal that?",
+      "Barnabas and Ananias did almost the same outward action. What made them so different inside?"
+    ],
+    "quiz": [
+      {
+        "q": "According to Peter, what was the sin of Ananias and Sapphira?",
+        "options": [
+          "Selling their property",
+          "Keeping some of the money",
+          "Lying to the Holy Spirit while pretending to give everything",
+          "Refusing to join the Church"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Peter says, 'You have not lied to men but to ___.' This teaches us that the Holy Spirit is:",
+        "options": [
+          "An angel",
+          "A holy force",
+          "Truly God",
+          "A prophet"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "What came upon the whole Church after these events?",
+        "options": [
+          "Great joy",
+          "Great fear (holy reverence)",
+          "Confusion",
+          "Persecution"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What honest path did Ananias and Sapphira refuse, which the Church offers us today?",
+        "options": [
+          "Almsgiving",
+          "Fasting",
+          "Repentance and Confession",
+          "Pilgrimage"
+        ],
+        "answer": 2
+      }
+    ],
+    "downloads": [
+      {
+        "type": "ppt",
+        "label": "Download Slides (PPTX)",
+        "file": "downloads/Ananias_and_Sapphira_Lesson_Slides.pptx"
+      },
+      {
+        "type": "pdf",
+        "label": "Study Guide (PDF)",
+        "file": "downloads/Ananias_and_Sapphira_StudyGuide.pdf"
+      }
+    ],
+    "sources": [
+      "The Holy Scriptures, Acts of the Apostles, chapters 4-5 (Orthodox Study Bible wording where quoted)",
+      "Dr. Kesis Solomon Mulugeta Zewde, Sunday School Curriculum in English, Level V — Week 39, 'Ananias and Sapphira,' the lesson that inspired this reading",
+      "Lesson slides prepared and taught by Dn Yonnas",
+      "An in-depth reading written by Dn Yonnas in the faith of the Ethiopian Orthodox Tewahedo Church",
+      "Doctrinal questions, and any question about the souls of Ananias and Sapphira, should be brought to your father confessor or parish priest"
+    ],
+    "related": [
+      {
+        "id": "book-of-acts",
+        "title": "The Book of Acts"
+      },
+      {
+        "id": "penance",
+        "title": "The Sacrament of Penance"
+      },
+      {
+        "id": "holy-trinity",
+        "title": "Lesson on the Holy Trinity"
+      }
+    ],
+    "featured": false
   }
 ];
 
@@ -3226,6 +3377,42 @@ const GLOSSARY = [
     "source": {
       "id": "guarding-time-senses",
       "title": "Guarding Our Time and Senses: Using Media Wisely"
+    }
+  },
+  {
+    "id": "koinonia",
+    "term": "Koinonia",
+    "def": "Holy communion or fellowship — the shared life of love in the early Church, where believers held all things in common (Acts 4:32).",
+    "source": {
+      "id": "ananias-and-sapphira",
+      "title": "Ananias and Sapphira: Truth Before God"
+    }
+  },
+  {
+    "id": "hypocrisy",
+    "term": "Hypocrisy",
+    "def": "Wearing a holy mask over an unholy heart; performing devotion outwardly while the inner reality is different. The central sin of Ananias and Sapphira.",
+    "source": {
+      "id": "ananias-and-sapphira",
+      "title": "Ananias and Sapphira: Truth Before God"
+    }
+  },
+  {
+    "id": "vainglory",
+    "term": "Vainglory",
+    "def": "The hunger to be seen and praised by people. It drove the lie of Ananias and Sapphira, as they wanted the honor of total sacrifice without the reality.",
+    "source": {
+      "id": "ananias-and-sapphira",
+      "title": "Ananias and Sapphira: Truth Before God"
+    }
+  },
+  {
+    "id": "holy-fear-of-god",
+    "term": "Holy Fear of God",
+    "def": "Reverent awe before the living and holy God — not the terror of a slave, but the beginning of wisdom (Proverbs 9:10).",
+    "source": {
+      "id": "ananias-and-sapphira",
+      "title": "Ananias and Sapphira: Truth Before God"
     }
   }
 ];

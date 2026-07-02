@@ -4682,5 +4682,66 @@ window.READINGS = {
    ],
    "issues": []
   }
+ },
+ "ananias-and-sapphira": {
+  "id": "ananias-and-sapphira",
+  "reading": [
+   { "h2": "The Setting: A Church of One Heart" },
+   { "p": "To understand why this story is so serious, we must first see the beauty it interrupts. At the end of Acts chapter 4, St. Luke paints a picture of the newborn Church in Jerusalem so radiant that it almost glows on the page: “the multitude of those who believed were of one heart and one soul” (Acts 4:32). No one called anything his own; those who had lands and houses sold them and laid the price at the apostles’ feet, and it was distributed to each as anyone had need. This is what the Church Fathers call koinonia — holy communion, a shared life of love. One man, a Levite from Cyprus named Joseph, gave so generously that the apostles renamed him Barnabas, “Son of Encouragement.”" },
+   { "p": "It is into this atmosphere of light that Ananias and his wife Sapphira step. Chapter 5 opens with one small but heavy word in the Greek: “But.” Against all this generosity, “a certain man named Ananias, with Sapphira his wife, sold a possession.”" },
+   { "h2": "What They Actually Did" },
+   { "p": "Ananias and Sapphira sold a piece of property, just as Barnabas had. But they kept back part of the price for themselves — and there was nothing wrong with that. The wrong was this: they brought a portion and laid it at the apostles’ feet as though it were the whole, pretending to a total sacrifice they had not made. They wanted the honor of Barnabas without the cost of Barnabas. And they had agreed on it together, husband and wife, beforehand." },
+   { "p": "St. Peter, filled with the Holy Spirit, saw straight through the performance: “Ananias, why has Satan filled your heart to lie to the Holy Spirit and keep back part of the price of the land for yourself? While it remained, was it not your own? And after it was sold, was it not in your own control?”" },
+   { "p": "Hear those words carefully, because they unlock the whole story. The land was theirs. The money was theirs. They were under no command to sell it, and after selling it they were under no command to give all of it. Peter says so plainly. So the sin was not greed for property and it was not a failure to give enough." },
+   { "h2": "The Real Sin: The Lie, Not the Money" },
+   { "p": "“Why have you conceived this thing in your heart?” Peter asks. “You have not lied to men but to God.” The sin was the lie. It was hypocrisy — the wearing of a holy mask over an unholy heart. They staged a public act of total devotion in order to be admired, while privately holding back and deceiving the Church and the Apostles." },
+   { "p": "This is why the early Fathers treat Ananias and Sapphira as a warning against vainglory (the hunger to be seen and praised) and against the love of money, which the Apostle Paul calls “a root of all kinds of evil” (1 Timothy 6:10). The two sins worked together: love of money made them keep back the price, and love of human praise made them lie about it. Satan, who is “a liar and the father of lies” (John 8:44), filled the empty space in their hearts — not by force, but because they made room for him." },
+   { "h2": "“You Have Not Lied to Men but to God”" },
+   { "p": "There is a treasure of doctrine hidden in this story that our Church holds dear. In verse 3 Peter says they lied “to the Holy Spirit.” In the very next breath, verse 4, he says they lied “not to men but to God.” To lie to the Holy Spirit is to lie to God — because the Holy Spirit is God." },
+   { "p": "This is one of the clearest witnesses in all of Scripture to the full divinity of the Holy Spirit, the Third Person of the Holy Trinity, “the Lord, the Giver of Life,” whom we confess in the Creed and worship together with the Father and the Son. The Holy Spirit is not a force, an influence, or an energy. He is a divine Person, and He can be sinned against, grieved, and lied to as only God can be. So this small domestic story quietly defends the same faith the Council of Constantinople defended: one God in three Persons, equal in glory." },
+   { "h2": "Why So Severe?" },
+   { "p": "When Ananias heard these words, he fell down and breathed his last. About three hours later Sapphira came in, not knowing what had happened. Peter gave her the chance to tell the truth — “Tell me whether you sold the land for so much?” — and she repeated the lie. She too fell down and died, and the young men buried her beside her husband." },
+   { "p": "We should not rush past how sobering this is, and we should not pretend it is easy. Why such a judgment? The Fathers offer us a reverent answer. This happened at the foundation of the Church, in the springtime of the Holy Spirit’s descent, when the community had to be taught — once and unforgettably — that God is holy and His Church is not a stage for pretending. A small lie tolerated at the root can rot the whole tree. As when fire first fell on a careless offering in the Old Testament, God acted visibly at the beginning so that countless others, seeing it, would learn to fear and live." },
+   { "p": "Scripture does not tell us the eternal destiny of their souls; that judgment belongs to the mercy of God alone, and the Church does not presume to pronounce it. What is given to us is not a verdict on them but a warning for us. (Questions about their salvation are exactly the kind to bring to your father confessor rather than to settle on our own.)" },
+   { "h2": "The Holy Fear That Followed" },
+   { "p": "St. Luke tells us the result twice: “great fear came upon all the church, and upon all who heard these things.” This is the first time the word “church” (ekklesia) appears in the Book of Acts — and it appears wrapped in the fear of God. This is not the cringing terror of a slave before a tyrant. It is holy fear: awe, reverence, the wide-eyed seriousness of standing in the presence of the living and holy God. “The fear of the Lord is the beginning of wisdom.” It is the same reverence we are meant to carry when we stand in the Liturgy, approach the holy Mysteries, or make our confession." },
+   { "h2": "The Mercy Hidden in the Warning" },
+   { "p": "It would be a mistake to read this only as a story about punishment. It is also, underneath, a story about mercy — because God exposes sin so that it can be healed. The tragedy of Ananias and Sapphira is that they were each given a moment to repent and chose the lie instead. Peter’s questions were open doors. Honesty would have led them to repentance; instead they doubled down." },
+   { "p": "Our Church gives us the opposite path through the Sacrament of Repentance (Confession). There we do the very thing Ananias and Sapphira refused to do: we stop pretending, we tell the truth about ourselves before God in the presence of the priest, and we receive not death but absolution and life. The God who sees the secret holding-back of the heart is the same God who “sees in secret” our hidden repentance and “will reward openly.” The story warns us against hypocrisy precisely so that we will run toward honesty." },
+   { "h2": "Living the Lesson" },
+   { "p": "For us — students, families, servants of the Church — this reading asks a few honest questions. Do we tell the truth even when a lie would make us look more generous, more devout, or more impressive than we really are? Do we give and serve to be seen by people, or quietly, for the love of God? Is there a gap between the face we show at church and the heart God actually sees? And do we carry the holy fear of God — not a fear that runs from Him, but one that takes Him seriously and so cannot bear to play games with holy things?" },
+   { "p": "Ananias and Sapphira teach us, by their fall, the beauty of a single, undivided heart — the very thing the Church had before they came in. May God give us that one heart: to love the truth, to give in secret, and to stand before Him without a mask." }
+  ],
+  "studyGuide": {
+   "overview": "Acts 5:1-11 tells how Ananias and Sapphira sold property and, keeping back part of the price, laid the rest at the apostles' feet as though it were the whole. Their property and money were their own; their sin was hypocrisy — lying to the Holy Spirit to win the honor of a total sacrifice they had not made. Peter's words, \"You have not lied to men but to God,\" are one of Scripture's clearest witnesses that the Holy Spirit is truly God. The account, set at the very foundation of the Church, teaches the holy fear of God and calls us to truthfulness and to the honest path of Confession.",
+   "keyPoints": [
+    "The early Church in Jerusalem shared everything in love (koinonia); Ananias and Sapphira broke that trust.",
+    "Their property and money were their own — they were not required to sell or to give all (Acts 5:4).",
+    "Their sin was hypocrisy and lying to the Holy Spirit, driven by the love of money and the love of human praise (vainglory).",
+    "Satan 'filled their heart' because they made room for him; the responsibility remained theirs.",
+    "\"You have not lied to men but to God\" shows that the Holy Spirit is truly God — a witness to the Holy Trinity.",
+    "God acted visibly at the Church's foundation so that all would learn the holy fear of God.",
+    "Scripture leaves their eternal fate to God's mercy; the warning is for us, not a verdict on them.",
+    "The Sacrament of Confession is the honest path they refused — we tell the truth and receive life."
+   ],
+   "reviewQuestions": [
+    "Peter says the land and money were their own. So what exactly was their sin?",
+    "How do verses 3 and 4 together teach us that the Holy Spirit is God?",
+    "What is the difference between the holy fear of God and being simply afraid of God?",
+    "Where are we tempted to 'look more devout than we are,' and how does Confession heal that?",
+    "Barnabas and Ananias did almost the same outward action. What made them so different inside?"
+   ]
+  },
+  "validity": {
+   "status": "sound",
+   "perspective": "Oriental Orthodox (Ethiopian Tewahedo)",
+   "checks": [
+    "The reading follows the text of Acts 4:32-5:11 and reproduces Peter's words as given in Scripture.",
+    "The divinity of the Holy Spirit is drawn directly from Acts 5:3-4 and framed within the Nicene-Constantinopolitan confession without any Filioque claim.",
+    "The severity of the judgment is explained pastorally as a foundational teaching of the holy fear of God, and the eternal fate of the souls is explicitly left to God's mercy.",
+    "Confession (the Sacrament of Repentance) is presented as the honest path, consistent with Orthodox sacramental theology."
+   ],
+   "issues": []
+  }
  }
 };

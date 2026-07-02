@@ -15,10 +15,12 @@
     { href: "index.html", label: "Home" },
     { href: "start-here.html", label: "Start Here" },
     { href: "our-faith.html", label: "Our Faith" },
-    { href: "lessons.html", label: "Lesson Library" },
+    { href: "lessons.html", label: "Lessons" },
     { href: "curriculum.html", label: "Curriculum" },
+    { href: "glossary.html", label: "Glossary" },
+    { href: "resources.html", label: "Resources" },
     { href: "community.html", label: "Community" },
-    { href: "downloads.html", label: "Download Center" },
+    { href: "downloads.html", label: "Downloads" },
   ];
 
   /* ---- Header / Footer injection --------------------------------------- */
@@ -31,6 +33,7 @@
     let here = currentPage();
     if (here === "faith.html") here = "our-faith.html"; // article pages belong to Our Faith
     if (here === "lesson.html") here = "lessons.html";
+    if (here === "creed.html" || here === "feasts-fasts.html") here = "resources.html"; // reference pages belong to Resources
     const links = NAV.map(
       (n) => `<li><a href="${n.href}" class="${n.href === here ? "active" : ""}">${n.label}</a></li>`
     ).join("");
@@ -602,6 +605,18 @@
       </div>`).join("");
   }
 
+  /* ---- RESOURCES (parish library PDFs) --------------------------------- */
+  function renderResources() {
+    const list = $("#resourceList");
+    if (!list) return;
+    list.innerHTML = RESOURCES.filter((r) => r.file).map((r) => `
+      <div class="dl-item">
+        <span class="dl-ico pdf">PDF</span>
+        <div class="dl-meta"><strong>${esc(r.title)}</strong><br><small>${esc(r.desc)}</small></div>
+        <a class="btn btn-primary btn-sm" href="${esc(r.file)}" download>Download ⤓</a>
+      </div>`).join("");
+  }
+
   /* ---- Boot ------------------------------------------------------------ */
   document.addEventListener("DOMContentLoaded", () => {
     mountChrome();
@@ -609,7 +624,9 @@
     renderLibrary();
     renderLesson();
     renderCurriculum();
+    renderGlossary();
     renderDownloads();
+    renderResources();
     renderFaithArticle();
     renderFaithIndex();
     renderFaithReading();
