@@ -12,6 +12,175 @@ const SITE = {
 
 const LESSONS = [
   {
+    "id": "theosis",
+    "title": "Theosis: Becoming Partakers of the Divine Nature",
+    "category": "Doctrine",
+    "audience": "High School & College (Level V)",
+    "week": 40,
+    "accent": "#b07d2b",
+    "byline": "By Dn. Yonnas",
+    "featured": true,
+    "summary": "God became man so that man might become god — not by sharing God's essence, but by grace: united to Christ, filled with the Holy Spirit, and restored to the image of God. This lesson defines theosis (deification), grounds it in Scripture and our own Alexandrian Fathers, guards it with the truth that we are united to God by grace and never by nature, and shows how it happens through the Incarnation, the Holy Mysteries, and a life of struggle.",
+    "objectives": [
+      "Define theosis (deification) accurately — partaking of the divine nature by grace",
+      "See it grounded in Scripture and in our own Alexandrian Fathers",
+      "Understand the guardrail: we are united to God by grace, never by essence",
+      "Learn how theosis happens — through the Incarnation, the Holy Mysteries, and a life of struggle",
+      "Be moved to pursue the true goal of the Christian life: union with God"
+    ],
+    "verses": [
+      {
+        "ref": "2 Peter 1:4",
+        "text": "\"...that through these you may be partakers of the divine nature.\""
+      },
+      {
+        "ref": "John 1:12",
+        "text": "\"to all who received Him He gave the right to become children of God\""
+      },
+      {
+        "ref": "Romans 8:29",
+        "text": "predestined \"to be conformed to the image of His Son\""
+      },
+      {
+        "ref": "1 John 3:2",
+        "text": "\"we shall be like Him, for we shall see Him as He is\""
+      },
+      {
+        "ref": "John 17:21–23",
+        "text": "\"that they may be one, as We are one\""
+      },
+      {
+        "ref": "John 6:56",
+        "text": "\"He who eats My flesh and drinks My blood abides in Me, and I in him.\""
+      }
+    ],
+    "confess": [],
+    "reject": [],
+    "teaching": [
+      "Theosis (deification) means partaking of the divine nature by grace — to become, by grace, what God is by nature: holy, immortal, and full of light",
+      "The Golden Exchange, in St. Athanasius' words: \"He was made man that we might be made God\" (On the Incarnation §54)",
+      "It is written across the New Testament — 2 Peter 1:4, John 1:12, Romans 8:29, 1 John 3:2, John 17:21–23",
+      "This is the ancient faith of our Alexandrian Fathers — St. Irenaeus, St. Athanasius, and St. Cyril of Alexandria",
+      "An Ethiopian connection: St. Athanasius, the great teacher of theosis, consecrated St. Frumentius (Abba Selama) as Ethiopia's first bishop — our Church has taught theosis from its first bishop",
+      "The guardrail: we become god by grace, never God by nature or essence; the Creator–creature distinction remains forever",
+      "The picture of iron in the fire: the iron glows with the fire's heat and light, yet never stops being iron — so the soul is filled with God yet remains a creature",
+      "How it happens: new birth in Baptism and Chrismation, real union in the Holy Qurban (Eucharist), and the daily struggle of prayer, fasting, and love — grace working with our effort (synergy)",
+      "Theosis begins now and is completed in the age to come, when we share Christ's incorruptibility and glory as glorified creatures"
+    ],
+    "terms": [
+      {
+        "term": "Theosis / Deification",
+        "def": "Partaking of the divine nature by grace; union with God and growth into His likeness — becoming by grace what God is by nature."
+      },
+      {
+        "term": "The Golden Exchange",
+        "def": "The Fathers' summary of the Gospel: \"God became man that man might become god\" (St. Athanasius)."
+      },
+      {
+        "term": "By grace, not by essence",
+        "def": "We are truly united to God by grace, but never become God by nature; the Creator–creature distinction remains forever."
+      },
+      {
+        "term": "Synergy",
+        "def": "The cooperation of God's grace with our free effort — God does the saving; we open the door and walk the road."
+      },
+      {
+        "term": "Image and likeness",
+        "def": "The image of God (reason, freedom, the call to God) is restored; the likeness (actual Christlikeness and holiness) is what we grow into."
+      }
+    ],
+    "discussion": [
+      "Why is \"getting to heaven\" too small a definition of salvation? What is the bigger goal?",
+      "How does the Incarnation make theosis possible? Why does our confession of Christ matter here?",
+      "What is the difference between being god by grace and God by essence — and why does it matter?",
+      "Explain the iron-in-the-fire picture in your own words.",
+      "Which Mystery or practice will you approach differently after this lesson?"
+    ],
+    "quiz": [
+      {
+        "q": "What does theosis mean?",
+        "options": [
+          "Becoming God by nature and essence",
+          "Partaking of the divine nature by grace",
+          "Being forgiven of sins only",
+          "Going to heaven when we die"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Complete St. Athanasius: \"For He was made man that we might be made ___.\"",
+        "options": [
+          "holy",
+          "free",
+          "God",
+          "wise"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Do we become God by essence, or by grace?",
+        "options": [
+          "By essence — we share God's nature",
+          "By grace — we remain creatures",
+          "Neither; theosis is only symbolic",
+          "By our own effort alone"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which Alexandrian father consecrated Ethiopia's first bishop?",
+        "options": [
+          "St. Cyril of Alexandria",
+          "St. Irenaeus of Lyons",
+          "St. Athanasius (who consecrated St. Frumentius)",
+          "St. John Chrysostom"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Through which Mysteries does theosis chiefly work?",
+        "options": [
+          "Baptism/Chrismation and the Eucharist",
+          "Confession only",
+          "Marriage and Holy Orders",
+          "None; it is by feeling alone"
+        ],
+        "answer": 0
+      }
+    ],
+    "downloads": [
+      {
+        "type": "ppt",
+        "label": "Download Slides (PPTX)",
+        "file": "downloads/Theosis_Lesson_Slides.pptx"
+      },
+      {
+        "type": "pdf",
+        "label": "Study Guide (PDF)",
+        "file": "downloads/Theosis_StudyGuide.pdf"
+      }
+    ],
+    "sources": [
+      "Holy Scripture: 2 Peter 1:4; John 1:12; 17:21–23; Romans 8:29; 1 John 3:2; John 6:56; Genesis 1:26",
+      "St. Athanasius of Alexandria, On the Incarnation §54",
+      "St. Irenaeus of Lyons, Against Heresies, Book V",
+      "St. Cyril of Alexandria, Commentary on the Gospel of John; Fragment on Psalm 82",
+      "The Coptic/Oriental Orthodox liturgical tradition (Liturgy of St. Gregory; Liturgy of St. Cyril)",
+      "Lesson slides prepared and taught by Dn. Yonnas",
+      "Doctrinal questions belong to your father confessor or parish priest"
+    ],
+    "related": [
+      {
+        "id": "st-cyril",
+        "title": "St. Cyril of Alexandria"
+      },
+      {
+        "id": "holy-trinity",
+        "title": "Lesson on the Holy Trinity"
+      }
+    ]
+  },
+  {
     "id": "holy-cross",
     "title": "The Holy Cross: History, Significance, and Doctrine",
     "category": "Ethiopian Orthodox Tradition",
@@ -3419,46 +3588,46 @@ const GLOSSARY = [
 
 const RESOURCES = [
   {
-    "title": "We Believe in One God (Parts 1–5)",
-    "desc": "Foundational study on the doctrine of God, from the parish library.",
-    "category": "Doctrine",
-    "file": "downloads/library/We_Believe_In_One_God_Part1.pdf"
+    "title": "Ethiopian Orthodox Tewahedo Church — Official Site",
+    "desc": "The official website of the EOTC: the faith, the Patriarchate, history, and the order of the Church.",
+    "category": "Official",
+    "url": "https://ethiopianorthodox.org"
   },
   {
-    "title": "EOTC: Our Beliefs and Values",
-    "desc": "An overview of the faith and values of the Ethiopian Orthodox Tewahedo Church.",
-    "category": "Doctrine",
-    "file": "downloads/library/EOTC_Our_Beliefs_And_Values.pdf"
+    "title": "Mahibere Kidusan (EOTC)",
+    "desc": "The Church's well-known Sunday School and youth movement — teachings, publications, and spiritual resources in English and Amharic.",
+    "category": "Teaching & Youth",
+    "url": "https://eotcmk.org"
   },
   {
-    "title": "The Seven Sacraments & Holy Orders",
-    "desc": "A guide to the Mysteries of the Church.",
-    "category": "Sacraments",
-    "file": "downloads/library/Seven_Sacraments_Holy_Orders.pdf"
+    "title": "St. Takla Haymanot Coptic Church — Library",
+    "desc": "One of the largest Oriental Orthodox libraries online: the Fathers, the Bible, the Synaxarium, doctrine, and the liturgy.",
+    "category": "Library",
+    "url": "https://st-takla.org"
   },
   {
-    "title": "The Divinity of Our Lord Jesus Christ",
-    "desc": "Scriptural and patristic witness to the divinity of Christ.",
-    "category": "Christology",
-    "file": "downloads/library/Divinity_Of_Our_Lord_Jesus_Christ.pdf"
+    "title": "Coptic Orthodox Church Network (CopticChurch.net)",
+    "desc": "Scripture, the Church Fathers, the Agpeya (hours of prayer), and articles from our sister Oriental Orthodox Church.",
+    "category": "Library",
+    "url": "https://copticchurch.net"
   },
   {
-    "title": "The Divinity of the Holy Spirit",
-    "desc": "On the person and divinity of the Holy Spirit.",
-    "category": "Doctrine",
-    "file": "downloads/library/Divinity_Of_The_Holy_Spirit.pdf"
+    "title": "OrthodoxWiki",
+    "desc": "A reference encyclopedia of Orthodox terms, saints, feasts, and doctrine — a helpful first place to look up a word.",
+    "category": "Reference",
+    "url": "https://orthodoxwiki.org"
   },
   {
-    "title": "Virgin Mary and Intercession",
-    "desc": "The Church's doctrine on the Theotokos and the intercession of the saints.",
-    "category": "Doctrine",
-    "file": "downloads/library/EOTC_Doctrine_Virgin_Mary_And_Intercession.pdf"
+    "title": "Ancient Faith Ministries",
+    "desc": "Orthodox podcasts, articles, and books on the faith, the spiritual life, and the Fathers.",
+    "category": "Media",
+    "url": "https://www.ancientfaith.com"
   },
   {
-    "title": "Dogma (Kesis Solomon)",
-    "desc": "Dogmatic theology reference by Kesis Solomon.",
-    "category": "Doctrine",
-    "file": "downloads/library/Dogma_Kesis_Solomon.pdf"
+    "title": "Bible Gateway",
+    "desc": "Read and search the Holy Scriptures in many translations — useful for the verses cited in each lesson.",
+    "category": "Scripture",
+    "url": "https://www.biblegateway.com"
   }
 ];
 

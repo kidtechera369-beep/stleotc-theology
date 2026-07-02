@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Ethiopian Orthodox cross">
+  <g fill="none" stroke="#b07d2b" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+    <!-- four identical arms + corner crescent, rotated -->
+    <g id="ethArm">
+      <!-- interlaced "eye": two bands bow apart then meet at the tip -->
+      <path d="M45 45.5 C 40.5 39.5, 41.5 30.5, 50 25.5"/>
+      <path d="M55 45.5 C 59.5 39.5, 58.5 30.5, 50 25.5"/>
+      <!-- open diamond inside the eye -->
+      <path d="M50 41 l-3.1 -4 l3.1 -4 l3.1 4 z"/>
+      <!-- crosslet terminal: a small cross ending the arm -->
+      <path d="M50 25.5 V15.5"/>
+      <path d="M44.6 20 H55.4"/>
+      <circle cx="50" cy="14" r="1.9" fill="#b07d2b"/>
+      <circle cx="43.4" cy="20" r="1.6" fill="#b07d2b"/>
+      <circle cx="56.6" cy="20" r="1.6" fill="#b07d2b"/>
+      <!-- corner crescent (interlace between this arm and the next) -->
+      <path d="M55.5 46.5 Q 63.5 50, 56.5 57"/>
+    </g>
+    <g transform="rotate(90 50 50)">
+      <path d="M45 45.5 C 40.5 39.5, 41.5 30.5, 50 25.5"/>
+      <path d="M55 45.5 C 59.5 39.5, 58.5 30.5, 50 25.5"/>
+      <path d="M50 41 l-3.1 -4 l3.1 -4 l3.1 4 z"/>
+      <path d="M50 25.5 V15.5"/>
+      <path d="M44.6 20 H55.4"/>
+      <circle cx="50" cy="14" r="1.9" fill="#b07d2b"/>
+      <circle cx="43.4" cy="20" r="1.6" fill="#b07d2b"/>
+      <circle cx="56.6" cy="20" r="1.6" fill="#b07d2b"/>
+      <path d="M55.5 46.5 Q 63.5 50, 56.5 57"/>
+    </g>
+    <g transform="rotate(180 50 50)">
+      <path d="M45 45.5 C 40.5 39.5, 41.5 30.5, 50 25.5"/>
+      <path d="M55 45.5 C 59.5 39.5, 58.5 30.5, 50 25.5"/>
+      <path d="M50 41 l-3.1 -4 l3.1 -4 l3.1 4 z"/>
+      <path d="M50 25.5 V15.5"/>
+      <path d="M44.6 20 H55.4"/>
+      <circle cx="50" cy="14" r="1.9" fill="#b07d2b"/>
+      <circle cx="43.4" cy="20" r="1.6" fill="#b07d2b"/>
+      <circle cx="56.6" cy="20" r="1.6" fill="#b07d2b"/>
+      <path d="M55.5 46.5 Q 63.5 50, 56.5 57"/>
+    </g>
+    <g transform="rotate(270 50 50)">
+      <path d="M45 45.5 C 40.5 39.5, 41.5 30.5, 50 25.5"/>
+      <path d="M55 45.5 C 59.5 39.5, 58.5 30.5, 50 25.5"/>
+      <path d="M50 41 l-3.1 -4 l3.1 -4 l3.1 4 z"/>
+      <path d="M50 25.5 V15.5"/>
+      <path d="M44.6 20 H55.4"/>
+      <circle cx="50" cy="14" r="1.9" fill="#b07d2b"/>
+      <circle cx="43.4" cy="20" r="1.6" fill="#b07d2b"/>
+      <circle cx="56.6" cy="20" r="1.6" fill="#b07d2b"/>
+      <path d="M55.5 46.5 Q 63.5 50, 56.5 57"/>
+    </g>
+    <!-- central medallion with inner cross -->
+    <circle cx="50" cy="50" r="4.7"/>
+    <path d="M50 45.6 V54.4 M45.6 50 H54.4"/>
+  </g>
+</svg>

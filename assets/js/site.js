@@ -41,7 +41,7 @@
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="index.html" aria-label="Home">
-          <span class="cross" aria-hidden="true">✠</span>
+          <span class="cross" aria-hidden="true"><img src="assets/img/eth-cross.svg" alt="" width="25" height="25"></span>
           <span class="brand-text">
             <span class="brand-title">STL Orthodox Lessons</span>
             <span class="brand-sub">Tewahedo · Young Adults</span>
@@ -67,7 +67,7 @@
       <div class="container">
         <div class="footer-grid">
           <div>
-            <div class="footer-brand"><span class="cross">✠</span> ${esc(SITE.name)}</div>
+            <div class="footer-brand"><img src="assets/img/eth-cross.svg" alt="" width="22" height="22" style="vertical-align:-4px;margin-right:.15rem"> ${esc(SITE.name)}</div>
             <p style="color:rgba(255,255,255,.75);max-width:42ch;">${esc(SITE.parish)}.</p>
             <p style="color:rgba(255,255,255,.7);margin-top:.6rem;font-size:.9rem">Glory be to the Father, the Son, and the Holy Spirit, one God. Amen.</p>
           </div>
@@ -320,7 +320,7 @@
         </div>
         <h1>${esc(l.title)}</h1>
         <p>${esc(l.summary)}</p>
-        <p class="class-note">✠ Taught at our Friday night theology &amp; Bible study class.</p>
+        <p class="class-note">Taught at our Friday night theology &amp; Bible study class.</p>
       </div></div>
       <section><div class="container">
         <div class="lesson-layout">
@@ -609,12 +609,14 @@
   function renderResources() {
     const list = $("#resourceList");
     if (!list) return;
-    list.innerHTML = RESOURCES.filter((r) => r.file).map((r) => `
-      <div class="dl-item">
-        <span class="dl-ico pdf">PDF</span>
-        <div class="dl-meta"><strong>${esc(r.title)}</strong><br><small>${esc(r.desc)}</small></div>
-        <a class="btn btn-primary btn-sm" href="${esc(r.file)}" download>Download ⤓</a>
-      </div>`).join("");
+    list.className = "grid grid-auto";
+    list.innerHTML = RESOURCES.filter((r) => r.url).map((r) => `
+      <article class="card hoverable">
+        <div class="card-meta"><span class="pill maroon">${esc(r.category)}</span></div>
+        <h3><a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a></h3>
+        <p>${esc(r.desc)}</p>
+        <div class="card-foot"><a class="btn btn-primary btn-sm" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">Visit site ↗</a></div>
+      </article>`).join("");
   }
 
   /* ---- Boot ------------------------------------------------------------ */

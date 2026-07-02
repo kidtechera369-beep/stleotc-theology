@@ -1,5 +1,78 @@
 /* AUTO-GENERATED slide-derived readings + study guides. See tools/readings/*.json */
 window.READINGS = {
+ "theosis": {
+  "id": "theosis",
+  "reading": [
+   { "h2": "The Question Behind Everything" },
+   { "p": "Before we define the word, sit with the question: what is salvation actually FOR? Many think salvation just means \"going to heaven when I die\" or \"getting my sins forgiven.\" But forgiveness is the beginning, not the goal. The Fathers ask a bigger question — what is God saving us INTO? — and the answer is stunning: union with God Himself, to share His very life." },
+   { "h2": "What Is Theosis?" },
+   { "p": "Theosis (Greek theosis), also called deification or divinization, means partaking of the divine nature by grace. It is to become, by grace, what God is by nature: holy, immortal, and full of light. We become children of God by grace, temples of the Holy Spirit, and are restored to the image of God." },
+   { "quote": "...that through these you may be partakers of the divine nature.", "cite": "2 Peter 1:4" },
+   { "h2": "The Golden Exchange" },
+   { "p": "The Fathers summed up the whole Gospel in one line:" },
+   { "quote": "For He was made man that we might be made God.", "cite": "St. Athanasius, On the Incarnation §54" },
+   { "p": "God the Son took our humanity so that we could share His divine life. This is the great exchange: He becomes what we are, to make us what He is. Salvation is not merely a legal pardon — it is God lifting man up into His own life." },
+   { "h2": "Rooted in Scripture" },
+   { "p": "Theosis is not speculation — it is written across the New Testament:" },
+   { "list": [
+     "2 Peter 1:4 — \"partakers of the divine nature\"",
+     "John 1:12 — to all who received Him He gave the right to become children of God",
+     "Romans 8:29 — to be conformed to the image of His Son",
+     "1 John 3:2 — \"we shall be like Him, for we shall see Him as He is\"",
+     "John 17:21–23 — \"that they may be one, as We are one\""
+   ] },
+   { "h2": "Our Own Fathers Taught This" },
+   { "p": "This is the ancient faith of the Alexandrian and pre-Chalcedonian Fathers — our patrimony:" },
+   { "list": [
+     "St. Irenaeus (2nd c.): the Word \"became what we are, that He might bring us to be even what He is Himself\" (Against Heresies V)",
+     "St. Athanasius of Alexandria: \"He was made man that we might be made God\" (On the Incarnation §54)",
+     "St. Cyril of Alexandria: those \"united to Christ in a true manner... are partakers in His nature\" (Commentary on John)"
+   ] },
+   { "h3": "An Ethiopian Connection" },
+   { "p": "This doctrine is not borrowed — it is woven into our own founding. St. Athanasius of Alexandria, the great teacher of theosis, is the very bishop who consecrated St. Frumentius (Abba Selama, \"Kesate Birhan\") as the first bishop of Ethiopia in the 4th century. The father who taught \"God became man that man might become god\" sent the faith to our land, and the Ethiopian Tewahedo Church has carried this Alexandrian faith ever since. Our Church has taught theosis from its very first bishop." },
+   { "h2": "Why the Incarnation Makes It Possible" },
+   { "p": "Theosis rests entirely on who Christ is. In Christ, God the Word truly became man — fully God and fully man, united in one incarnate nature, without mixture and without separation. In Him our human nature is healed and joined to God, and because our humanity is united to divinity in Christ, we can be united to God in Him. No Incarnation, no theosis — this is why the Tewahedo confession of Christ matters so much." },
+   { "h2": "The Guardrail: By Grace, Not by Essence" },
+   { "p": "This is the point we must never blur. We become god by grace — we do not become God by nature or essence. As St. Cyril taught, \"being men we are called gods, not as the true God... but as God willed\" (Fragment on Psalm 82). The Creator–creature distinction remains forever: we are always creatures, always dependent on grace. We are not absorbed into God, and we do not become uncreated." },
+   { "h3": "A Picture: Iron in the Fire" },
+   { "p": "A traditional image the Fathers loved: put a piece of iron into a fire. It begins to glow — it takes on the fire's heat and light — yet it never stops being iron; it does not become fire by nature. So the soul united to God shines with His life and grace, yet remains a creature. This is theosis: filled with God, transformed by God, yet never ceasing to be ourselves." },
+   { "h2": "Image and Likeness" },
+   { "p": "At creation, God made man in His image and likeness (Genesis 1:26). The image — reason, freedom, the call to God — was wounded by sin, never erased. The likeness — actual holiness, becoming like God — is what we grow into. Theosis is the restoration of the image and the journey toward His likeness: becoming truly like Christ." },
+   { "h2": "How Theosis Happens" },
+   { "h3": "New Birth in the Mysteries" },
+   { "p": "Theosis is not an idea to admire — it is a life we enter through the Church. In Baptism we are born again, buried and raised with Christ, and made children of God by grace. In Chrismation (Meron) we receive the indwelling Holy Spirit, becoming His temple (1 Corinthians 6:19). Here the divine life is planted in us." },
+   { "h3": "The Eucharist" },
+   { "p": "The Holy Qurban is the very center of theosis. In Communion we truly partake of the Body and Blood of Christ — real union with Him. The Liturgy of St. Gregory proclaims of the risen Christ: \"You ascended to the heavens bodily, while You filled all with Your divinity.\" What we receive, we are called to become: Christ living in us." },
+   { "quote": "He who eats My flesh and drinks My blood abides in Me, and I in him.", "cite": "John 6:56" },
+   { "h3": "The Daily Struggle (Synergy)" },
+   { "p": "Grace works with our effort — this cooperation is called synergy. Through prayer we commune with God through the day; through fasting and repentance we cleanse the heart to make room for God; through keeping the commandments and, above all, love, we walk the road. The whole ascetic and liturgical life of the Church is the path of theosis. God does the saving; we open the door and walk the road." },
+   { "h2": "The Glory to Come" },
+   { "p": "Theosis begins now but is completed in the age to come. At the resurrection we will share Christ's incorruptibility and glory, conformed fully to the image of His Son. This is the Christian's true hope: eternal, deified life with God — as glorified creatures." },
+   { "quote": "We shall be like Him, for we shall see Him as He is.", "cite": "1 John 3:2" },
+   { "h2": "Living the Lesson" },
+   { "p": "For us — students, families, servants of the Church — this lesson asks: Do I see my faith as merely \"rules,\" or as a real journey into God's life? Am I using the Mysteries God gave me — Confession, Communion, prayer, fasting — as the path they are? When I am tempted to give up on holiness, do I remember what I am being called to become?" },
+   { "p": "Takeaway: God became man so that man might become god. This is who you were made to be — do not settle for less." }
+  ],
+  "studyGuide": {
+   "overview": "Theosis (deification) is the heart of salvation in the Orthodox faith: God became man so that man might become god — not by sharing God's essence, but by grace. United to Christ, filled with the Holy Spirit, and restored to the image of God, we are called into union with God Himself through the Incarnation, the Holy Mysteries, and a life of struggle.",
+   "keyPoints": [
+    "Theosis means partaking of the divine nature by grace — becoming by grace what God is by nature.",
+    "The Golden Exchange (St. Athanasius): \"He was made man that we might be made God.\"",
+    "It is grounded in Scripture (2 Peter 1:4; John 1:12; Romans 8:29; 1 John 3:2) and in our Alexandrian Fathers (Irenaeus, Athanasius, Cyril).",
+    "The guardrail: we are united to God by grace, never by essence — the Creator–creature distinction remains forever.",
+    "The iron-in-the-fire picture: filled with God's light yet still a creature.",
+    "It happens through Baptism and Chrismation, the Eucharist, and the daily struggle of prayer, fasting, and love (synergy).",
+    "St. Athanasius, teacher of theosis, consecrated Ethiopia's first bishop, St. Frumentius — our Church has taught this from its first bishop."
+   ],
+   "reviewQuestions": [
+    "Why is \"getting to heaven\" too small a definition of salvation? What is the bigger goal?",
+    "How does the Incarnation make theosis possible, and why does our confession of Christ matter?",
+    "What is the difference between being god by grace and God by essence — and why does it matter?",
+    "Explain the iron-in-the-fire picture in your own words.",
+    "Name two Mysteries through which theosis works, and one daily practice that is part of the path."
+   ]
+  }
+ },
  "great-lent": {
   "id": "great-lent",
   "reading": [
